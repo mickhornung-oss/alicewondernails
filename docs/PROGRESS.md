@@ -1883,3 +1883,27 @@ Diese Datei ist das laufende Arbeitsprotokoll.
   - Keine Daten in `data/`.
   - Keine Medieninhalte.
   - Keine Arbeiten ausserhalb des Projektordners.
+
+## 2026-05-04 - Untracked Cleanup fuer `.env.example` und `modules/`
+
+- Datum: 2026-05-04
+- Auftrag: Verbleibende untracked Pfade pruefen und Git-Status bereinigen.
+- Geaenderte Dateien:
+  - `.env.example`
+  - `.gitignore`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - `.env.example` auf generischen Admin-User-Platzhalter (`ADMIN_USERNAME=change-me`) neutralisiert.
+  - Verifiziert, dass keine echten Secrets, keine echten Hashes und keine realen Session-Secrets in `.env.example` stehen.
+  - `modules/` als reiner Platzhalter-/Planungsbestand identifiziert (9x identische Placeholder-README ohne Funktionslogik).
+  - `modules/` in `.gitignore` aufgenommen, damit diese Alt-/Planungsreste nicht veroeffentlicht werden.
+- Was getestet wurde:
+  - Inhalte von `.env.example` gelesen und auf Secret-Muster geprueft.
+  - `modules/` rekursiv aufgelistet und alle README-Inhalte geprueft.
+  - `git status --short --branch` nach den Aenderungen geprueft.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Keine.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Keine Loeschung produktiver Projektdateien.
+  - Kein Push.

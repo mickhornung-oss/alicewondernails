@@ -19,3 +19,4 @@ cookies.txt
 *.temp
 Thumbs.db
 .DS_Store
+modules/
