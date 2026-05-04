@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin-Login | Alice Wonder Nails</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body class="admin-page">
+  <main class="admin-wrap">
+    <article class="panel suit-card suit-heart-club admin-card">
+      <h1>Admin-Login</h1>
+      <p class="meta-note">Geschützter Bereich für {{ admin_username }}.</p>
+
+      {% if flash %}
+      <div class="flash {{ flash.level }}">{{ flash.message }}</div>
+      {% endif %}
+
+      <form method="post" action="/admin/login" autocomplete="off">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+        <label for="username">Benutzername</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">Passwort</label>
+        <input id="password" name="password" type="password" required>
+
+        <div class="admin-actions">
+          <button class="btn btn-primary" type="submit">Einloggen</button>
+          <a href="/public/index.html">Zur Startseite</a>
+        </div>
+      </form>
+    </article>
+  </main>
+</body>
+</html>

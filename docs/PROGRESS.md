@@ -1,0 +1,1885 @@
+# PROGRESS
+
+Diese Datei ist das laufende Arbeitsprotokoll.
+
+- Sie wird immer weitergefuehrt.
+- Niemals alte Eintraege loeschen.
+- Neue Eintraege kommen chronologisch nach unten.
+
+## 2026-04-27 - Initiales Dokumentationsfundament
+
+- Datum: 2026-04-27
+- Auftrag: Dokumentationsfundament fuer Alice Wonder Nails erstellen
+- Betroffene Dateien:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_PLAN.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DATA_COLLECTION.md`
+  - `docs/TESTING_RULES.md`
+  - `docs/DECISIONS.md`
+- Was geaendert wurde:
+  - Projektordner festgelegt.
+  - Dokumentationssystem angelegt.
+  - Modulstrategie festgelegt.
+  - Farbkatalog Nr. 1 als aktuelle Arbeitsbasis festgelegt.
+  - Variante 2 als Reserve notiert.
+  - Modul 1 grob definiert als Vorstellungsseite + Early-Access-/Kontakt-Registrierung.
+  - Noch keine Webseite gebaut.
+  - Noch keine Shopfunktion gebaut.
+  - Noch kein Adminbereich gebaut.
+- Was getestet wurde:
+  - Pruefung, dass alle Pflichtdateien erstellt wurden.
+  - Pruefung, dass Dateien lesbar sind.
+  - Pruefung, dass `README.md` auf `docs/PROJECT_RULES.md` und `docs/PROGRESS.md` verweist.
+  - Pruefung, dass keine Dateien ausserhalb des Projektordners angelegt oder geaendert wurden.
+- Ergebnisstatus: GRUEN
+
+- Offene Punkte:
+  - Inhalte (Texte, Bilder, Videos, Links) von Frau/Tochter einsammeln.
+  - Modul 1 in spaeterem Auftrag konkret umsetzen.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Keine HTML-Seite gebaut.
+  - Kein Shop gebaut.
+  - Kein Adminbereich gebaut.
+  - Kein Login gebaut.
+  - Keine Datenbank angelegt.
+  - Keine Social-Media-Integration umgesetzt.
+  - Kein Deployment ausgefuehrt.
+
+## 2026-04-27 - Auftrag 1 Nachpruefung und Bestaetigung
+
+- Datum: 2026-04-27
+- Auftrag: Erneute Pruefung des Dokumentationsfundaments gegen die Vorgaben aus Auftrag 1
+- Betroffene Dateien:
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Chronologischer Nachpruefungs-Eintrag hinzugefuegt.
+  - Keine inhaltlichen Projektentscheidungen geaendert.
+- Was getestet wurde:
+  - Existenzpruefung aller Pflichtdateien in `docs/` und `README.md`.
+  - Lesbarkeitspruefung aller Pflichtdateien.
+  - Pruefung der README-Verweise auf `docs/PROJECT_RULES.md` und `docs/PROGRESS.md`.
+  - Pruefung, dass initialer Eintrag "Initiales Dokumentationsfundament" vorhanden ist.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Inhalte fuer Modul 1 durch Frau/Tochter bereitstellen.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Keine Webseite gebaut.
+  - Kein Shop gebaut.
+  - Kein Adminbereich gebaut.
+  - Kein Login gebaut.
+  - Keine Datenbank angelegt.
+  - Keine Registrierung umgesetzt.
+  - Keine Galerie-Funktion umgesetzt.
+  - Keine Social-Media-Integration umgesetzt.
+  - Kein Deployment ausgefuehrt.
+
+## 2026-04-27 - Modul-1-Blueprint erstellt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 2 als reine Dokumentation umsetzen
+- Betroffene Dateien:
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Neues Blueprint-Dokument fuer Modul 1 erstellt.
+  - Scope, Nicht-Ziele, Seitenstruktur, Inhaltsmatrix, Platzhalterstandard, Testpunkte und Abnahmekriterien dokumentiert.
+  - Klare Nicht-Bau-Regel fuer diesen Auftrag dokumentiert.
+- Was getestet wurde:
+  - Pruefung, dass `docs/MODULE_1_BLUEPRINT.md` existiert und lesbar ist.
+  - Pruefung, dass dieser neue Eintrag am Ende von `docs/PROGRESS.md` steht.
+  - Pruefung, dass keine Implementierungsdateien fuer Webseite/Features angelegt wurden.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Inhalte von Frau/Tochter (Texte, Bilder, Videos, Links) fehlen weiterhin.
+  - Rechtliche Inhalte liegen noch nicht final vor.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Keine Webseite gebaut.
+  - Keine Features gebaut.
+  - Kein Shop gebaut.
+  - Kein Adminbereich gebaut.
+  - Kein Login gebaut.
+  - Keine Datenbank angelegt.
+  - Keine Registrierung umgesetzt.
+  - Keine Galerie-Funktion umgesetzt.
+  - Keine Social-Media-Integration umgesetzt.
+  - Kein Deployment ausgefuehrt.
+
+## 2026-04-27 - Erster sichtbarer Modul-1-Prototyp gebaut
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 3 - erster sichtbarer, lokal oeffnbarer Modul-1-Prototyp als statischer Teststand
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Erstellte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `modules/core/README.md`
+  - `modules/home/README.md`
+  - `modules/about/README.md`
+  - `modules/gallery/README.md`
+  - `modules/videos/README.md`
+  - `modules/contact/README.md`
+  - `modules/legal/README.md`
+  - `modules/shop_teaser/README.md`
+  - `modules/wholesale_teaser/README.md`
+  - `public/assets/images/placeholders/.gitkeep`
+  - `public/assets/videos/placeholders/.gitkeep`
+  - `public/assets/logo/.gitkeep`
+- Geaenderte Dateien:
+  - `README.md` (kurzer Oeffnen-Hinweis hinzugefuegt)
+  - `docs/PROGRESS.md` (dieser Eintrag)
+- Gebaute Bereiche:
+  - Header/Navigationsbereich mit Ankern zu allen geforderten Sektionen
+  - Hero-Bereich mit Claim-Platzhalter, Einfuehrung und zwei CTAs
+  - Markenvorstellung (sprechende Platzhalter)
+  - Designerin/Tochter-Bereich inkl. Portrait-Platzhalter
+  - Press-On & Modellarbeiten
+  - Galerie mit 10 Platzhalterkarten
+  - Video-Bereich mit 4 Platzhalterkarten
+  - Social-Media-Bereich mit Platzhalterlinks
+  - Kontakt/Early-Access-Formular als Frontend-Prototyp ohne Versand
+  - Shop-kommt-bald-Teaser und Grosshandel-kommt-spaeter-Teaser
+  - Footer mit Impressum/Datenschutz-Platzhaltern
+- Was bewusst NICHT gebaut wurde:
+  - Kein Backend
+  - Keine Datenbank
+  - Kein echter Newsletterversand
+  - Kein echter Shop
+  - Kein Login
+  - Kein Adminbereich
+  - Keine Verarbeitung echter personenbezogener Daten
+  - Keine externe Framework- oder CDN-Abhaengigkeit
+- Was getestet wurde:
+  - Dateiexistenz: `public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`
+  - Statische Pruefung, dass CSS und JS in `public/index.html` eingebunden sind
+  - Statische Pruefung der Navigationsanker und Ziel-IDs
+  - Pruefung, dass Formular-Submit in JS abgefangen wird und nur Prototyp-Testmeldung ausgibt
+  - Pruefung auf externe Ressourcen/Abhaengigkeiten in `public/` (keine Treffer)
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden
+  - Hinweis: Keine echte visuelle Browser-Sichtpruefung automatisiert durchgefuehrt
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte Browser-Sichtpruefung steht noch aus
+  - Finale Inhalte (Texte, Bilder, Videos, Links) von Frau/Tochter fehlen weiterhin
+  - Rechtliche Endtexte fehlen weiterhin
+
+## 2026-04-27 - Design-Polish V2 fuer Modul-1-Prototyp
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 4 - bestehendes Modul-1-Frontend gezielt visuell veredeln (ohne neue Features)
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Bearbeitete Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Was visuell verbessert wurde:
+  - Gold deutlich sichtbarer und hochwertiger eingesetzt (staerkere, edle Konturen auf Header, Karten, Boxen, Formularfeldern).
+  - Typografie verfeinert: elegantere Heading- und modernere UI-Font-Stacks, bessere visuelle Hierarchie.
+  - Header bereinigt: Text \"Beauty Studio im Aufbau\" entfernt.
+  - Wonderland-Anmutung subtil verstaerkt (ornamentale Bordueren, Kartensymbol-Akzente, feine Dekoelemente, ohne Ueberladung).
+  - Kontrast und Lesbarkeit stabil gehalten (ruhige Flachen hinter Text, klare Fokus-/Hover-Zustaende).
+- Was bewusst NICHT geaendert wurde:
+  - Keine neue Seitenlogik und keine neuen Produktfeatures.
+  - Kein Backend, keine Datenbank, kein Versand, kein Shop, kein Login, kein Admin.
+  - Keine externen Frameworks und keine CDN-Abhaengigkeiten.
+  - Bestehende Inhaltsstruktur und sprechende Platzhalter inhaltlich nicht umgeschrieben.
+- Welche Pruefungen wurden gemacht:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`).
+  - Statische Pruefung CSS-/JS-Einbindung in `public/index.html`.
+  - Statische Pruefung der Navigation/Ankerlinks.
+  - Statische Pruefung: Text \"Beauty Studio im Aufbau\" entfernt.
+  - Statische Pruefung: Gold-/Typografie-/Wonderland-CSS-Regeln vorhanden.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine echte visuelle Browserpruefung automatisiert durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) noch ausstehend.
+
+## 2026-04-27 - SichtprÃ¼fung-Feinkorrektur V3 fÃ¼r Modul-1-Prototyp
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 5 - SichtprÃ¼fungs-Feinkorrekturen am bestehenden Prototyp ohne neue Features
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- GeÃ¤nderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `docs/PROGRESS.md`
+- Welche SichtprÃ¼fungs-Korrekturen wurden umgesetzt:
+  - Umlaute und deutsche Sonderzeichen in der sichtbaren UI korrekt gesetzt (z. B. Ãœber, spÃ¤ter, GroÃŸhandel, fÃ¼r, frÃ¼he).
+  - Interne Projektlabels entfernt (u. a. \"Modul 1 - Sichtbarer Prototyp\").
+  - Technische Platzhalter-Metatexte aus der sichtbaren UI entfernt und durch kurze, natÃ¼rliche Platzhaltertexte ersetzt.
+  - Wonderland-Deko harmonischer verteilt (dezente Suit-Akzente als feine Linien statt Block-Cluster).
+  - GoldrÃ¤nder leicht verstÃ¤rkt und klarer ausgearbeitet, ohne Ã¼berladen zu wirken.
+  - Rahmen-/Eckenlogik vereinheitlicht (Ã¼berwiegend weich gerundet mit konsistenten feinen Eckakzenten).
+- Logo-Status:
+  - Im Ordner `public/assets/logo` wurde keine echte Logo-Datei gefunden (`.gitkeep` vorhanden).
+  - Platzhalter bleibt aktiv, aber JS-Logo-Autodetektion fÃ¼r gÃ¤ngige lokale Dateinamen wurde vorbereitet.
+- Was bewusst NICHT geÃ¤ndert wurde:
+  - Keine neuen Features.
+  - Kein Backend, keine Datenbank, kein echter Versand.
+  - Kein Shop, kein Login, kein Admin.
+  - Keine externen Frameworks/CDNs.
+- Welche PrÃ¼fungen wurden gemacht:
+  - Dateiexistenz: `public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`.
+  - UTF-8-Meta in HTML geprÃ¼ft und Umlaut-Treffer statisch verifiziert.
+  - Statische PrÃ¼fung: \"Modul 1 - Sichtbarer Prototyp\" nicht mehr in `public/index.html`.
+  - Statische PrÃ¼fung: technische Platzhalter-SchlÃ¼sselwÃ¶rter (Lieferung/Umfang/Rechtliche PrÃ¼fung/Bildrechte/Modul-Ersatz) nicht mehr in der sichtbaren HTML-Datei.
+  - Statische PrÃ¼fung: CSS/JS weiterhin korrekt eingebunden.
+  - Statische PrÃ¼fung: Gold-/Rahmen-/Suit-Regeln im CSS vorhanden.
+  - Statische PrÃ¼fung: keine externen Ressourcen in `public/`.
+  - PrÃ¼fung, dass keine Arbeiten auÃŸerhalb des Projektordners durchgefÃ¼hrt wurden.
+  - Hinweis: Keine automatisierte echte Browser-SichtprÃ¼fung durchgefÃ¼hrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-SichtprÃ¼fung (Desktop + Mobile) steht noch aus.
+
+## 2026-04-27 - Original-Logo eingebunden (Logo fest.png)
+
+- Datum: 2026-04-27
+- Auftrag: Original-Logo aus `public/assets/logo` zu 100% nutzen
+- Geaenderte Dateien:
+  - `public/assets/js/main.js`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Exakter Dateiname `assets/logo/Logo fest.png` als erster Logo-Kandidat hinterlegt.
+  - Logo-Darstellung auf vollstaendige Anzeige ohne Kreis-Crop umgestellt, sobald ein echtes Logo geladen wird.
+- Was getestet wurde:
+  - Statische Pruefung, dass `Logo fest.png` im Logo-Ordner vorhanden ist.
+  - Statische Pruefung, dass `assets/logo/Logo fest.png` in der JS-Kandidatenliste enthalten ist.
+  - Statische Pruefung, dass CSS-Regeln fuer vollstaendige Logo-Anzeige (`.logo-shell.has-logo`) vorhanden sind.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browserpruefung steht noch aus.
+
+## 2026-04-27 - Branding-Header-Rework mit echtem Logo
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 6 - Branding/Header gezielt mit echtem Logo ueberarbeiten
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Welche Branding-/Header-Anpassungen gemacht wurden:
+  - Brand-Unit links im Header neu komponiert (Logo-Panel + zweistufige Wortmarke + dezente Suit-Ornamente).
+  - Header-Hintergrund und Brand-Container aufeinander abgestimmt, damit Logo und Header wie aus einem Guss wirken.
+  - Abstaende, vertikale Ausrichtung und Proportionen im Branding-Bereich verfeinert.
+  - Navigation unveraendert gelassen und nur layoutseitig stabil mit dem neuen Branding ausgerichtet.
+- Wie das Logo integriert wurde:
+  - Echtes Logo fest in `index.html` gesetzt: `assets/logo/Logo fest.png`.
+  - Logo in ein hochwertiges, helles Panel mit Goldrahmen eingebettet (statt freischwebend).
+  - Anzeige ohne Kreis-Crop, damit das Originalmotiv vollstaendig sichtbar bleibt.
+- Ob Typografie/Brand-Unit angepasst wurde:
+  - Ja, Wortmarke in zwei Ebenen (`Alice` / `Wonder Nails`) mit markennaher, eleganter Hierarchie umgesetzt.
+- Was bewusst NICHT geaendert wurde:
+  - Keine neuen Features.
+  - Kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+  - Keine Menuepunkte oder Navigationsfunktionen geaendert.
+  - Restliche Seitenbereiche nur minimal/unveraendert belassen.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Statische Pruefung der Einbindung des echten Logos in HTML.
+  - Statische Pruefung der Header-/Branding-CSS-Regeln (Brand-Unit, Logo-Panel, Typo, responsive Verhalten).
+  - Statische Pruefung, dass Navigation/Anker und CSS/JS-Einbindung weiter vorhanden sind.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) noch ausstehend.
+
+## 2026-04-27 - Header-Brand-Lockup verfeinert
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 7 - Header/Logo/Brand-Lockup gezielt feintunen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Welche Header-/Branding-Korrekturen umgesetzt wurden:
+  - Logo-Flaeche sichtbar verkleinert und kompakter eingebettet.
+  - Heller Logo-Hintergrund weicher getoent und weniger hart abgesetzt.
+  - Brand-Lockup enger komponiert (Logo, Wortmarke, dezente Suit-Ornamente).
+  - Wortmarke in feinere Hierarchie uebersetzt (`Alice` plus `Wonder • Nails`) fuer bessere Markenwirkung.
+  - Navigation naeher und ausgewogener in den Header eingebunden, Menuepunkte unveraendert.
+  - Header links/rechts insgesamt ruhiger und balancierter gesetzt.
+- Wie Logo, Wortmarke und Navigation angepasst wurden:
+  - Logo bleibt `assets/logo/Logo fest.png`, weiterhin voll sichtbar, aber mit kleinerer/sauberer Flaeche.
+  - Wortmarke typografisch und in Abstaenden verfeinert.
+  - Navigation in einem dezenten Nav-Container positioniert und spacing reduziert.
+- Was bewusst NICHT geaendert wurde:
+  - Keine neuen Features.
+  - Kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+  - Keine Menuepunkte oder Navigationslogik geaendert.
+  - Keine Module oder Inhaltsbereiche ausserhalb des Header-Fokus umgebaut.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Statische Pruefung: echtes Logo korrekt in HTML eingebunden.
+  - Statische Pruefung: Brand-Lockup-/Header-CSS-Regeln vorhanden (Logo-Flaeche, Hintergrund, Wortmarke, Nav-Integration, responsive Anpassung).
+  - Statische Pruefung: Navigation/Anker, CSS- und JS-Einbindung vorhanden.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) noch ausstehend.
+
+## 2026-04-27 - Frontend für Modul 1 neu aufgebaut
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 8 - Frontend fuer Modul 1 strukturell und gestalterisch neu aufziehen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `docs/PROGRESS.md`
+- Was im Frontend neu strukturiert wurde:
+  - Klare, ruhige Seitenstruktur mit konsistentem Layoutsystem fuer alle Modul-1-Bereiche umgesetzt.
+  - Hero, Content-Bloecke, Galerie, Videos, Kontakt und Footer in ein einheitliches Panel-/Grid-System ueberfuehrt.
+  - Sichtbare technische Metatexte wurden nicht in die UI gebracht.
+- Wie Header/Navigation/Logo neu angeordnet wurden:
+  - Markenname `Alice Wonder Nails` prominent oben im Header platziert.
+  - Navigation klein und elegant direkt darunter angeordnet.
+  - Echtes Logo klein und sauber rechts oben als Markenanker integriert.
+  - Kein grosser linker Logo-Block mehr.
+- Wie die neue Formensprache umgesetzt wurde:
+  - Einheitliche, leicht gerundete Boxen/Karten fuer relevante Inhaltsflaechen.
+  - Konsistente Gold-Border-Staerke und einheitliche Flaechenwirkung.
+  - Uneinheitliche alte Ecksonderlogik entfernt.
+- Wie die Kartensymbole integriert wurden:
+  - Einheitliches Suit-Prinzip ueber `suit-card` mit kleinen goldenen Symbolen in den oberen Ecken umgesetzt.
+  - Herz/Karo/Pik/Kreuz in harmonischer Variation ueber Panels und Karten verteilt.
+- Was bewusst NICHT geaendert wurde:
+  - Keine neuen Features.
+  - Kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+  - Keine Menuepunkte/Funktionen der Navigation geaendert.
+  - Keine externen Frameworks/CDNs eingefuehrt.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Umlaute und UTF-8-Meta statisch geprueft.
+  - Statische Pruefung: Markenname oben, Navigation darunter, kleines Logo rechts oben vorhanden.
+  - Statische Pruefung: konsistente Formensprache und Suit-Eckprinzip im CSS vorhanden.
+  - Statische Pruefung: alte uneinheitliche Eck-/Header-Altregeln entfernt.
+  - Statische Pruefung: CSS/JS korrekt eingebunden.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) noch ausstehend.
+
+## 2026-04-27 - Header-Feinschliff für Markenname und Navigation
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 9 - gezielte optische Korrekturen im oberen Header-/Branding-Bereich
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geänderte Dateien:
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Welche Farb-/Zentrierungsanpassungen gemacht wurden:
+  - Header-Layout auf kompakte, mittige Ausrichtung für Markenname und Navigation nachgeschärft.
+  - Markenname farblich in einen warmen Goldton überführt und mit dezenter Tiefenwirkung veredelt.
+  - Navigationslinks von weiß auf goldwarm umgestellt, inklusive harmonischer Hover-/Focus-Zustände.
+- Wie Markenname und Navigation geändert wurden:
+  - `Alice Wonder Nails` sitzt im Header klarer zentriert und wirkt typografisch edler.
+  - Navigation bleibt direkt darunter, wurde aber optisch ruhiger mittig eingebettet.
+  - Logo bleibt als kleiner rechter Markenanker erhalten und wurde nicht vergrößert.
+- Wie die Kartensymbole oben ergänzt wurden:
+  - Zusätzliche kleine Suit-Akzente (Herz/Karo/Pik/Kreuz) dezent links/rechts am Markennamen und an der Navigation ergänzt.
+  - Symbole bewusst klein gehalten, um Lesbarkeit und Ruhe im Header nicht zu stören.
+- Was bewusst NICHT geändert wurde:
+  - Keine neuen Features.
+  - Kein neues Layout-System außerhalb des Header-Feinschliffs.
+  - Kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+  - Hero und restliche Modul-1-Bereiche funktional unverändert.
+- Welche Prüfungen gemacht wurden:
+  - Dateiexistenz geprüft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Statische Prüfung der CSS-Regeln für Goldfarbton, Zentrierung und obere Suit-Akzente.
+  - Statische Prüfung, dass Navigation/Anker sowie CSS-/JS-Einbindung weiterhin vorhanden sind.
+  - Statische UTF-8-/Umlautprüfung in `public/index.html` durchgeführt.
+  - Prüfung auf externe Ressourcen in `public/` (keine Treffer).
+  - Prüfung, dass keine Arbeiten außerhalb des Projektordners durchgeführt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserprüfung durchgeführt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtprüfung (Desktop + Mobile) steht noch aus.
+
+## 2026-04-27 - Feinschliff Wortmarke, Navigation und Goldlinien
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 10 - gezielte optische Veredelung im Kopfbereich und bei Goldumrandungen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Wie "Alice" und "WonderNails" typografisch getrennt wurden:
+  - Die Wortmarke im Header wurde in zwei Zeilen aufgeteilt (`Alice` oben, `WonderNails` darunter).
+  - `Alice` nutzt jetzt eine eigene Script-Font-Charakteristik, `WonderNails` bleibt ruhiger und serif-orientiert.
+  - Zwischen beiden wurde eine feine goldene Trennlinie als Divider eingefuegt.
+- Welche Farbe fuer die Wortmarke gewaehlt wurde:
+  - Wortmarke von reinem Gold auf helle Perlmutt-/Rose-Lilac-Nuancen umgestellt (`Alice` sehr helles Perlmutt-Lilac, `WonderNails` weicheres Rose-Lilac).
+  - Gold bleibt fuer Akzente, Rahmen, Outline und Deko reserviert.
+- Ob "Alice" eine goldene Outline erhalten hat:
+  - Ja. `Alice` hat eine feine goldene Kontur per Text-Stroke/Shadow erhalten.
+- Wie der Navigationsbalken verkleinert wurde:
+  - Nav-Links kompakter gemacht (kleinere Schrift, geringere vertikale Paddings, reduzierte Gaps).
+  - Header-Vertikalabstaende ebenfalls leicht reduziert, damit der Navigationsbereich insgesamt filigraner wirkt.
+- Wie die goldenen Umrandungen verstaerkt wurden:
+  - Gold-Deckung (`--gold-border`) angehoben.
+  - Border-Staerken bei Header-Trennlinie, Karten/Boxen, Logo-Rahmen, Input-Feldern, Feedback-Box, Chips und sekundaeren Buttons leicht erhoeht.
+- Wie Kartensymbole oben veredelt wurden:
+  - Obere Brand-Akzente mit kleinen Suit-Symbolen plus dezenter A-/Ace-Anmutung links/rechts im Markenbereich ergaenzt.
+  - Navigation behaelt zusaetzliche kleine Suit-Akzente links/rechts bei.
+- Was bewusst NICHT geaendert wurde:
+  - Keine neuen Features.
+  - Kein Neubau der Seite und kein neues Layout-System.
+  - Keine Menuepunkte oder Navigationlogik geaendert.
+  - Kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+  - Keine inhaltlichen Texte in den Modulbereichen umgeschrieben.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Statische Pruefung: Wortmarke in `Alice` + `WonderNails` getrennt und Divider vorhanden.
+  - Statische Pruefung: eigene Typo fuer `Alice` sowie ruhige Typo fuer `WonderNails` vorhanden.
+  - Statische Pruefung: goldene Outline fuer `Alice` vorhanden.
+  - Statische Pruefung: Nav-Parameter (Fontsize/Padding/Gaps) reduziert.
+  - Statische Pruefung: Goldrahmen-/Borderwerte sichtbar verstaerkt.
+  - Statische Pruefung: CSS-/JS-Einbindung in `public/index.html` vorhanden.
+  - Statische Umlaut-Stichprobe in `public/index.html` durchgefuehrt.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) steht noch aus.
+
+## 2026-04-27 - Letzter Header-Feinschliff für heute
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 11 - nur gezielte Korrekturen im oberen Marken-/Navigationsbereich
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Welche oberen Symbolgruppen entfernt wurden:
+  - Obere Mini-Symbolgruppe an der Wortmarke entfernt (fruehere Top-Akzente mit A-/Suit-Anmutung sind nicht mehr aktiv).
+  - Obere Mini-Symbolgruppe im Navigationsbereich entfernt (keine zusaetzlichen Top-Symbole mehr ueber/nahe der Navigation).
+- Was bewusst beibehalten wurde:
+  - Schreibweise und Look von `WonderNails` unveraendert.
+  - Seitliche Dreier-Symbolgruppen links/rechts an der Navigation beibehalten.
+  - Grundidee der Wortmarke beibehalten.
+- Wie die Navigation unter die Wortmarke gesetzt wurde:
+  - Brand-Block als vertikale, zentrierte Einheit gesetzt (`display:flex; flex-direction:column; align-items:center`).
+  - Navigation mit sauberem Top-Abstand direkt unter `WonderNails` positioniert.
+  - Kompakter, eleganter Header-Abstand ohne neue Layout-Experimente.
+- Was bewusst NICHT geaendert wurde:
+  - Keine Menuepunkte geaendert.
+  - Kein Neubau und keine neuen Features.
+  - Kein Eingriff in Hero und restliche Seitenbereiche.
+  - Keine neue Farbwelt und keine neue Formensprache eingefuehrt.
+  - Kein Backend, kein Shop, kein Login, kein Admin.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`).
+  - Statische Pruefung: `WonderNails` unveraendert vorhanden.
+  - Statische Pruefung: obere Mini-Symbolgruppen nicht mehr in CSS vorhanden.
+  - Statische Pruefung: seitliche Dreier-Symbole an der Navigation vorhanden.
+  - Statische Pruefung: Navigation folgt im DOM unter `WonderNails` und ist CSS-seitig als Markenblock darunter ausgerichtet.
+  - Statische Umlaut-Pruefung in `public/index.html` durchgefuehrt.
+  - Statische Pruefung: CSS/JS weiterhin korrekt eingebunden.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) steht weiterhin aus.
+
+## 2026-04-27 - Logo-Splashscreen vor Hauptseite eingebaut
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 12 - Logo-Splashscreen vor der normalen Hauptseite ergaenzen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `docs/PROGRESS.md`
+- Wie der Splashscreen eingebaut wurde:
+  - Direkt am Anfang von `body` wurde ein Fullscreen-Container `#logoSplash` eingefuegt.
+  - Das echte Logo `public/assets/logo/Logo fest.png` wird zentral und gross in einer eleganten Card gezeigt.
+  - Ein dezent passender Intro-Text wurde unter dem Logo eingebunden.
+  - Fallback fuer deaktiviertes JavaScript wurde per `noscript`-Style hinterlegt, damit die Seite nicht blockiert bleibt.
+- Dauer des Splashscreens:
+  - Sichtbar fuer ca. 3000 ms.
+  - Ausblendanimation mit ca. 680 ms.
+- Wie das automatische Ausblenden funktioniert:
+  - JS setzt nach 3000 ms die Klasse `is-fading`.
+  - Nach Ende der Fade-Dauer wird der Splashscreen aus dem DOM entfernt und `body` wieder freigegeben.
+- Was bewusst NICHT geaendert wurde:
+  - Header-Layout nicht neu gebaut.
+  - Wortmarke, Navigation, Boxen/Karten und restliche Seitenstruktur nicht umgebaut.
+  - Keine neuen Module, kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Statische Pruefung: Splashscreen-Markup und Logo-Einbindung vorhanden.
+  - Statische Pruefung: CSS fuer Fullscreen, Fade-out und hohe Overlay-Ebene vorhanden.
+  - Statische Pruefung: JS-Timer auf 3000 ms + 680 ms vorhanden, Splashscreen wird entfernt.
+  - Statische Pruefung: bestehende Navigation-, Button- und Formular-Logik im JS weiterhin vorhanden.
+  - Statische Pruefung: CSS/JS in `public/index.html` korrekt eingebunden.
+  - Statische Pruefung: Umlaute weiterhin korrekt in HTML vorhanden.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Splash sichtbar/fade/Bedienbarkeit danach) steht noch aus.
+
+## 2026-04-27 - Wortmarke Alice verfeinert und Header bereinigt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 13 - gezielter Feinschliff an Wortmarke Alice und kleine Header-Bereinigung
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Wie `Alice` optisch angepasst wurde:
+  - Buchstabenfuellung auf sehr helles Weiss/Perlweiss gesetzt.
+  - Feine goldene Kontur ueber `-webkit-text-stroke` verstaerkt.
+  - Dezenter goldener Glow/Schatten direkt um die Schrift ergaenzt.
+- Ob weisse Fuellung + goldene Kontur + goldener Schatten umgesetzt wurden:
+  - Ja, alle drei Punkte wurden umgesetzt.
+- Wie die ornamentale/verzierte Einfassung ergaenzt wurde:
+  - Um die Wortmarke wurde eine dezente elegante Rahmung ergaenzt (feine Goldlinie, sanfte Hinterlegung, kleine ornamentale Akzente links/rechts).
+- Header-Bereinigung:
+  - Header-Logo (oberes Logo im Headerbereich) entfernt.
+  - Willkommen-Satz im Hero-Bereich entfernt.
+- Was bewusst NICHT geaendert wurde:
+  - `WonderNails`-Schreibweise und Grundoptik nicht unnoetig veraendert.
+  - Navigation nicht umbenannt und nicht neu erfunden.
+  - Splashscreen-Logik nicht umgebaut.
+  - Keine neuen Features, kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`, `public/assets/logo/Logo fest.png`).
+  - Statische Pruefung: `Alice`/`WonderNails` Struktur vorhanden.
+  - Statische Pruefung: `Alice` hat helle Fuellung, goldene Kontur und goldenen Glow.
+  - Statische Pruefung: ornamentale Einfassung um die Wortmarke vorhanden.
+  - Statische Pruefung: Header-Logo ist in `index.html` entfernt.
+  - Statische Pruefung: Willkommen-Satz im Hero nicht mehr vorhanden.
+  - Statische Pruefung: Splashscreen-Markup/Timing/Auto-Fade weiterhin vorhanden.
+  - Statische Pruefung: CSS/JS weiterhin korrekt eingebunden.
+  - Statische Umlaut-Pruefung in `public/index.html` durchgefuehrt.
+  - Pruefung auf externe Ressourcen in `public/` (keine Treffer).
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Desktop + Mobile) steht weiterhin aus.
+
+## 2026-04-27 - Echte Galerie- und Video-Medien eingebunden
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 14 - echte Medien einbinden, CTA-Buttons angleichen, Instagram-Link setzen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Gefundene Bilderordner und Anzahl Bilder:
+  - Ordner: `public/assets/images/Bilder Alice`
+  - Gefundene Bilddateien: 5 (`image1.jpeg`, `image2.jpeg`, `image4.jpeg`, `image5.jpeg`, `image6.jpeg`)
+- Gefundene Videoordner und Anzahl Videos:
+  - Ordner: `public/assets/videos/Video Alice`
+  - Gefundene Videodateien: 5 (`Video_1.mov` bis `Video_5.mov`)
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Wie Bilder eingebunden wurden:
+  - Galerie auf 5 echte Medienkarten reduziert.
+  - In jeder Karte wird ein echtes Bild per `img` aus `Bilder Alice` geladen.
+  - Dateinamen mit Leerzeichen im Pfad wurden sauber URL-encodiert (`Bilder%20Alice`).
+  - Darstellung ueber `media-image` mit einheitlichem Seitenverhaeltnis und `object-fit: cover` abgesichert.
+- Wie Videos eingebunden wurden:
+  - Video-Bereich auf 5 echte Medienkarten erweitert.
+  - In jeder Karte wird ein echtes Video per HTML5-`video` mit `controls` und `preload="metadata"` geladen.
+  - Kein `autoplay` gesetzt.
+  - Dateinamen mit Leerzeichen im Pfad wurden sauber URL-encodiert (`Video%20Alice`).
+  - Darstellung ueber `media-video` mit einheitlichem Seitenverhaeltnis und `object-fit: cover` abgesichert.
+- Welche Placeholder entfernt wurden:
+  - Alte Galerie-Placeholder (10 Dummy-Karten) entfernt.
+  - Alte Video-Placeholder (4 Dummy-Karten) entfernt.
+- Button-Styling vereinheitlicht:
+  - CTA-Buttons `btn-primary` und `btn-secondary` auf denselben rosa/pinken Verlauf vereinheitlicht (Vorlage: `Zur Galerie`).
+  - Einheitlicher Hover-/Focus-Effekt fuer beide CTA-Stile ergaenzt.
+- Instagram-Link gesetzt:
+  - Im Social-Bereich auf `https://www.instagram.com/alicewonder_nails/` gesetzt.
+  - Oeffnet im neuen Tab mit `target="_blank"` und `rel="noopener noreferrer"`.
+- Was bewusst NICHT geaendert wurde:
+  - Header/Wortmarke/Splashscreen nicht umgebaut.
+  - Keine neue Farbwelt und keine neue Formensprache eingefuehrt.
+  - Keine neuen Module/Features, kein Backend, keine Datenbank, kein Shop, kein Login, kein Admin.
+  - Keine grossen Textumbauten ausser den geforderten Medien-/Link-Anpassungen.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`).
+  - Statische Pruefung: 5 Bildreferenzen auf echte Dateien im Galerie-Bereich vorhanden.
+  - Statische Pruefung: 5 Video-Tags mit echten Quellen vorhanden.
+  - Statische Pruefung: Videos mit `controls`, ohne `autoplay`, mit `preload="metadata"`.
+  - Statische Pruefung: alte Galerie-/Video-Placeholder nicht mehr vorhanden.
+  - Statische Pruefung: CTA-Buttonstile vereinheitlicht.
+  - Statische Pruefung: Instagram-Link + neues Tab + `noopener noreferrer` vorhanden.
+  - Statische Pruefung: Header/Wortmarke/Splashscreen-Elemente weiterhin vorhanden.
+  - Statische Pruefung: Umlaute sowie CSS-/JS-Einbindung in `public/index.html` korrekt.
+  - Pruefung auf externe Abhaengigkeiten (CDN/Importe) in `public/`: keine Treffer; externer Instagram-Link ist bewusst gesetzt.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browserpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte visuelle Browser-Sichtpruefung (Bilder/Videos/Buttons auf Desktop + Mobile) steht noch aus.
+
+## 2026-04-27 - Finaler Feinschliff fuer Medien, Pills und Videos
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 15 - finale Nachschaerfung fuer Pills, Bilddarstellung und Videoeinbindung
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Wie Pill-/Kategorie-Buttons angepasst wurden:
+  - `chip-list`-Tags auf rosa/pinken Verlauf (Royal Violet/Wonder Pink) vereinheitlicht.
+  - Goldrand edel integriert und Text auf gute Lesbarkeit (`#fff`) gesetzt.
+  - Dezenten Hover-Effekt fuer die Pills ergaenzt.
+- Wie Galeriebilder kleiner dargestellt wurden:
+  - `.media-image` auf `width: 96%` und zentrierte Darstellung (`margin: 0 auto ...`) umgestellt.
+  - `aspect-ratio` und `object-fit: cover` beibehalten, damit keine Verzerrung entsteht.
+- Was an der Video-Einbindung geprueft/geaendert wurde:
+  - Alle 5 Video-Tags geprueft und auf `controls + preload="metadata" + playsinline` gestellt.
+  - `autoplay` bleibt deaktiviert.
+  - `type="video/quicktime"` entfernt, damit Browser-Quellerkennung weniger strikt ist.
+  - Pro Karte zusaetzlicher lokaler Fallback-Link `Video direkt oeffnen` auf dieselbe `.mov`-Datei ergaenzt.
+  - Pfade auf `assets/videos/Video%20Alice/Video_1.mov` bis `Video_5.mov` geprueft.
+- Ob Videos lokal abspielbar sind oder welches Problem noch besteht:
+  - Status: UNKLAR.
+  - Einbindung/Pfade sind korrekt; ohne echten Browser-Playback-Test ist Codec- und Browser-Kompatibilitaet von `.mov` nicht final bestaetigt.
+  - Moegliche Restursache bei Nichtwiedergabe: MOV-Codec-Unterstuetzung des verwendeten Browsers.
+- Was bewusst nicht geaendert wurde:
+  - Header, Wortmarke und Splashscreen nicht veraendert.
+  - Instagram-Link unveraendert beibehalten.
+  - Keine Layout- oder Farbwelt-Neudefinition ausser der angeforderten Pill-/Medien-Feinjustierung.
+  - Keine neuen Features/Module, kein Backend, kein Shop, kein Login, kein Admin.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz geprueft (`public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`).
+  - Statische Pruefung: Pills mit Verlauf und Hover-Regeln vorhanden.
+  - Statische Pruefung: Bilder weiterhin 5x vorhanden und per CSS kleiner dargestellt.
+  - Statische Pruefung: Videos weiterhin 5x vorhanden, mit Controls und ohne Autoplay.
+  - Statische Pruefung: `type=video/quicktime` entfernt und Fallback-Links vorhanden.
+  - Statische Pruefung: Header/Wortmarke/Splashscreen weiterhin vorhanden.
+  - Statische Pruefung: Instagram-Link weiterhin korrekt gesetzt.
+  - Statische Pruefung: Umlaute sowie CSS/JS-Einbindung korrekt.
+  - Pruefung auf externe Abhaengigkeiten (CDN/Importe) in `public/`: keine Treffer; externer Instagram-Link ist bewusst gesetzt.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte visuelle Browser-/Video-Wiedergabepruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Echte Browser-Sichtpruefung und Video-Playback-Bestaetigung (Desktop + Mobile) steht noch aus.
+
+## 2026-04-27 - Content-Briefing fuer fehlende Texte erstellt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 16 - Text-Lieferliste fuer Frau/Tochter als uebergabefaehiges Briefing erstellen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/DATA_COLLECTION.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+  - `public/index.html`
+- Erstellte Datei:
+  - `docs/CONTENT_BRIEFING_MODUL_1.md`
+- Welche Textbereiche aufgenommen wurden:
+  - Hero-Hauptbereich
+  - Markenvorstellung
+  - Vorstellung Designerin / Tochter
+  - Press-On & Modellarbeiten
+  - Galerie-Einleitung
+  - Bildtexte fuer 5 Galeriebilder
+  - Video-Einleitung
+  - Videotexte fuer 5 Videos
+  - Social-Media-Text
+  - Early Access / Kontakt
+  - Shop kommt bald
+  - Haendler / Grosshandel kommt spaeter
+  - Footer-Kurztext
+  - Rechtliche Inhalte separat
+  - Abschluss-Checkliste fuer Frau/Tochter
+- Was geaendert wurde:
+  - Neues Content-Briefing-Dokument als strukturierte Text-Lieferliste angelegt.
+  - Keine Quelltextdateien der Webseite angepasst.
+- Was bewusst NICHT geaendert wurde:
+  - `public/index.html` nicht geaendert.
+  - `public/assets/css/style.css` nicht geaendert.
+  - `public/assets/js/main.js` nicht geaendert.
+  - Keine Features, kein Layout, keine Medien, keine Navigation geaendert.
+- Welche Pruefungen gemacht wurden:
+  - Pruefung, dass `docs/CONTENT_BRIEFING_MODUL_1.md` erstellt wurde und lesbar ist.
+  - Pruefung, dass nur Dokumentationsdateien geaendert wurden.
+  - Pruefung, dass dieser Eintrag am Ende von `docs/PROGRESS.md` vorhanden ist.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Frau/Tochter liefern die finalen Texte gemaess Briefing.
+  - Nach Textlieferung Inhalte in die Webseite uebernehmen und visuell gegenpruefen.
+
+## 2026-04-27 - Word-Dokument fuer Content-Briefing erstellt
+
+- Datum: 2026-04-27
+- Auftrag: Word-Datei aus dem Content-Briefing zum Download bereitstellen
+- Gelesene Dokumente:
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+- Geaenderte Dateien:
+  - `docs/CONTENT_BRIEFING_MODUL_1.docx` (neu)
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Aus `docs/CONTENT_BRIEFING_MODUL_1.md` eine Word-Datei erstellt.
+  - Ausgabe gespeichert als `docs/CONTENT_BRIEFING_MODUL_1.docx`.
+- Was bewusst NICHT geaendert wurde:
+  - Keine Aenderung an `public/index.html`.
+  - Keine Aenderung an `public/assets/css/style.css`.
+  - Keine Aenderung an `public/assets/js/main.js`.
+  - Keine neuen Features oder Layout-Aenderungen.
+- Welche Pruefungen gemacht wurden:
+  - Dateiexistenz und Dateigroesse von `docs/CONTENT_BRIEFING_MODUL_1.docx` geprueft.
+  - DOCX-Struktur (ZIP-Inhalt mit `[Content_Types].xml`, `_rels/.rels`, `word/document.xml`) geprueft.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Optional: Inhalt visuell in Microsoft Word pruefen und bei Bedarf Feinformatierung (z. B. Ueberschriftenstile) nachziehen.
+
+## 2026-04-27 - V1-Finishline-Check erstellt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 17 - V1-Landingpage pruefen, Finishline dokumentieren, nur kleine eindeutige Korrekturen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/STYLE_GUIDE.md`
+  - `docs/DECISIONS.md`
+  - `docs/CONTENT_BRIEFING_MODUL_1.md`
+- Gepruefte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `public/assets/images/Bilder Alice/*`
+  - `public/assets/videos/Video Alice/*`
+  - `public/assets/logo/Logo fest.png`
+- Erstellte Datei:
+  - `docs/V1_FINISHLINE_CHECK.md`
+- Wichtigste offene Punkte:
+  - Finale Texte fuer mehrere Seitenbereiche fehlen weiterhin.
+  - Rechtliche Seiten (Impressum/Datenschutz) und Footer-Links darauf fehlen.
+  - Video-Playback mit `.mov` browseruebergreifend noch nicht final bestaetigt.
+  - Echte visuelle Endabnahme (Desktop + Mobile) vor Upload steht aus.
+- Ob Code geaendert wurde:
+  - Ja, kleine eindeutige Korrekturen:
+    - `public/index.html`: technischer "Modul 1"-Titel/Meta durch neutrale Seitentitel/-beschreibung ersetzt.
+    - `public/assets/js/main.js`: sichtbaren Entwicklerbegriff "Prototyp" in Formularmeldung entfernt.
+- Was bewusst NICHT geaendert wurde:
+  - Kein Layout-Umbau.
+  - Keine neuen Features.
+  - Kein Backend, kein Shop, kein Login, kein Admin.
+  - Keine Rechtstexte erfunden.
+- Was getestet wurde:
+  - Existenzpruefung: `index.html`, `style.css`, `main.js`, `docs/V1_FINISHLINE_CHECK.md`.
+  - Splashscreen-Pruefung per statischem Codecheck (`logoSplash`, Fade-Logik, CSS-Klassen).
+  - Medienpruefung: 5 Bilder und 5 Videos vorhanden und in `index.html` referenziert.
+  - Instagram-Link auf `https://www.instagram.com/alicewonder_nails/` geprueft.
+  - Navigation/Anker statisch geprueft (`#start`, `#about`, `#gallery`, `#videos`, `#contact`, `#shop`).
+  - CTA-/Pill-Styling per CSS-Klassenabgleich geprueft.
+  - Umlaute per statischer Stichprobe in `index.html` geprueft.
+  - Entwicklertext-Check auf "Modul/Prototyp" in sichtbaren Strings geprueft.
+  - Externe Ressourcen geprueft (nur gewollter Instagram-Link gefunden).
+  - Keine absoluten Windows-Pfade in `public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js` gefunden.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Textlieferung von Frau/Tochter einarbeiten.
+  - Rechtliche Seiten erstellen und verlinken.
+  - Browser-/Device-Endabnahme inklusive Video-Playback bestaetigen.
+
+## 2026-04-27 - Impressum- und Datenschutzstruktur fuer V1 erstellt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 18 - Rechtsseitenstruktur fuer V1 anlegen und Footer-Verlinkung setzen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/V1_FINISHLINE_CHECK.md`
+  - `docs/DATA_COLLECTION.md`
+  - `docs/DECISIONS.md`
+  - `public/index.html`
+- Erstellte Dateien:
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `docs/PROGRESS.md`
+- Welche Platzhalter enthalten sind:
+  - Impressum: Anbieter/Verantwortliche Person, ladungsfaehige Anschrift, Kontakt (E-Mail/Telefon), Unternehmensstatus, Inhaltsverantwortung.
+  - Datenschutz: Verantwortliche Stelle, Hosting-Anbieter, produktive Formularverarbeitung, Speicherdauer.
+- Was umgesetzt wurde:
+  - Zwei eigenstaendige Rechtsseiten im bestehenden Seitenstil erstellt.
+  - Auf beiden Rechtsseiten eine Navigation zur Startseite sowie Footer-Links zu Startseite, Impressum und Datenschutz eingebaut.
+  - In `public/index.html` Footer-Links auf `impressum.html` und `datenschutz.html` gesetzt.
+  - Hinweis zum aktuellen Stand auf Impressum-Seite aufgenommen (kein Shop/Verkauf aktuell).
+  - Datenschutzseite mit den geforderten Abschnitten 1-9 inklusive klarer Platzhalterstruktur aufgebaut.
+- Keine finalen Rechtstexte erfunden:
+  - Es wurden keine echten Personen-/Unternehmensdaten, keine USt-ID, keine Shop-Rechtstexte und keine Fake-Angaben eingetragen.
+- Was bewusst NICHT geaendert wurde:
+  - Kein Umbau des Hauptdesigns der Landingpage.
+  - Splashscreen unveraendert.
+  - Bilder/Videos unveraendert.
+  - Header/Wortmarke der Startseite nicht umgebaut.
+  - Keine Trackingtools, kein Backend, kein Shop, kein Login, kein Admin, keine Datenbank.
+  - `public/assets/css/style.css` nicht geaendert.
+- Welche Pruefungen gemacht wurden:
+  - Existenzpruefung: `public/impressum.html`, `public/datenschutz.html`, `public/index.html`, `public/assets/css/style.css`, `public/assets/js/main.js`.
+  - Linkpruefung in `public/index.html`: relative Footer-Links auf `impressum.html` und `datenschutz.html` vorhanden.
+  - Inhaltspruefung Impressum: geforderte Platzhalter vorhanden, keine erfundenen Realdaten eingetragen.
+  - Inhaltspruefung Datenschutz: geforderte Abschnitte 1-9 vorhanden, produktive Funktionen als Platzhalter gekennzeichnet.
+  - Pruefung auf absolute Windows-Pfade in HTML-Dateien: keine Treffer.
+  - Pruefung auf externe CDN-/Tracking-Ressourcen: keine neuen Treffer; bestehender externer Instagram-Link in Startseite bleibt bewusst.
+  - Pruefung, dass CSS/JS in `public/index.html` weiterhin korrekt eingebunden sind.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte Browser-Sichtpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Rechtstexte muessen vor Livegang rechtlich finalisiert werden.
+  - Reale Pflichtangaben (Name, Anschrift, Kontakt, Hosting-Anbieter, Speicherdauern) muessen eingesetzt werden.
+  - Visuelle Endpruefung der neuen Seiten im Browser steht aus.
+
+## 2026-04-27 - V1-Rechtsseiten mit Verantwortlichendaten befuellt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 19 - bestehende Impressum-/Datenschutzseiten mit bekannten V1-Verantwortlichendaten befuellen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_FINISHLINE_CHECK.md`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `public/index.html`
+- Geaenderte Dateien:
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `docs/PROGRESS.md`
+- Welche Verantwortlichendaten eingetragen wurden:
+  - Verantwortliche Person: Michael Hornung
+  - Anschrift: Kirchplatz 14, 63512 Hainburg
+  - E-Mail: mick.hornung@gmail.com
+  - Verantwortlich fuer den Inhalt: Michael Hornung
+- Offene Angaben:
+  - Telefonnummer bleibt Platzhalter: `[PLATZHALTER: Telefonnummer folgt noch]`
+- Hosting-Status:
+  - Nicht final bestaetigt; als Platzhalter belassen: `[PLATZHALTER: Hosting-Anbieter final bestaetigen]`
+- Was bewusst NICHT geaendert wurde:
+  - `public/index.html` inhaltlich nicht angepasst (Links auf Impressum/Datenschutz bleiben wie zuvor gesetzt).
+  - Kein Layout-Umbau der Startseite, kein Splashscreen-Eingriff, keine Medienaenderung.
+  - Kein Backend, kein Shop, kein Login, kein Admin, kein Tracking, kein Cookie-Banner.
+  - Keine USt-ID, keine Rechtsform, keine erfundenen Unternehmensangaben eingetragen.
+- Welche Pruefungen gemacht wurden:
+  - Existenzpruefung: `public/impressum.html`, `public/datenschutz.html`, `public/index.html`.
+  - Statische Pruefung, dass Michael Hornung, Anschrift und E-Mail korrekt in beiden Rechtsseiten stehen.
+  - Pruefung, dass Telefonnummer als Platzhalter verbleibt.
+  - Pruefung, dass keine USt-ID oder Rechtsform erfunden wurde.
+  - Pruefung, dass Startseite weiterhin auf `impressum.html` und `datenschutz.html` verlinkt.
+  - Pruefung auf absolute Windows-Pfade in `public/*.html`: keine Treffer.
+  - Pruefung auf neue Tracking-/CDN-Ressourcen: keine neuen Treffer; bestehender Instagram-Link in Startseite bleibt bewusst.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+  - Hinweis: Keine automatisierte echte Browser-Sichtpruefung durchgefuehrt.
+- Ergebnisstatus: GELB
+- Offene Punkte:
+  - Telefonnummer final eintragen, sobald freigegeben.
+  - Hosting-Anbieter final bestaetigen.
+  - Rechtliche Endpruefung der Rechtsseiten vor Livegang.
+
+## 2026-04-27 - Backend-/Admin-/Datenschutz-Konzept fuer V1 festgelegt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 20 - Telefon entfernen, Hosting finalisieren und V1-Backend/Admin/Datenschutz-Konzept dokumentieren
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_FINISHLINE_CHECK.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/DECISIONS.md`
+  - `public/index.html`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+- Geaenderte Dateien:
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `docs/PROGRESS.md`
+- Erstellte Konzeptdatei:
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+- Was geaendert wurde:
+  - Telefonangaben/Telefon-Platzhalter aus Impressum und Datenschutz vollstaendig entfernt.
+  - Hosting in Datenschutz auf STRATO gesetzt: `Hosting-Anbieter: STRATO AG`.
+  - Verbindliches V1-Konzept fuer spaeteres Backend/Admin/Datenschutz erstellt.
+- Backend-/Admin-Entscheidungen:
+  - Backend: FastAPI
+  - Datenbank: SQLite
+  - Admin: kleiner geschuetzter Bereich fuer Michael Hornung
+  - Export: CSV (Excel nur als Auswertungsformat)
+  - Adminumfang, Datenmodell `leads`, Sicherheitsregeln und Umsetzungsreihenfolge dokumentiert.
+- Datenschutz-/Sicherheitsregeln im Konzept:
+  - Kontakt und Early Access getrennt
+  - kein Tracking, kein Newsletterversand in V1
+  - Secrets ueber `.env`, Passwort-Hash, CSRF, Rate-Limits, Honeypot, sichere Session
+  - SQLite ausserhalb `public/`, CSV nur nach Login, HTTPS-Pflicht live
+- Was bewusst noch nicht implementiert wurde:
+  - Kein Backend umgesetzt
+  - Keine Datenbank angelegt
+  - Kein Adminlogin gebaut
+  - Formular nicht produktiv geschaltet
+  - Keine Shop-/Konto-Funktionen gebaut
+- Welche Pruefungen gemacht wurden:
+  - Pruefung, dass `Telefon`/Telefon-Platzhalter in `public/impressum.html` und `public/datenschutz.html` nicht mehr vorkommen.
+  - Pruefung, dass `Hosting-Anbieter: STRATO AG` in `public/datenschutz.html` vorhanden ist.
+  - Pruefung, dass `docs/V1_BACKEND_ADMIN_CONCEPT.md` existiert und FastAPI + SQLite + Admin + Sicherheit enthaelt.
+  - Pruefung, dass `public/index.html` weiterhin auf `impressum.html` und `datenschutz.html` verlinkt.
+  - Pruefung auf absolute Windows-Pfade in `public/*.html`: keine Treffer.
+  - Pruefung auf neue Tracking-/CDN-Ressourcen: keine neuen Treffer; bestehender Instagram-Link bleibt bewusst.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Deployment-Faehigkeit von FastAPI auf dem geplanten STRATO-Tarif vor Implementierung pruefen.
+  - Konkrete Implementierungsauftraege fuer Backend, Datenmodell und Admin nacheinander starten.
+
+## 2026-04-27 - Early-Access-Loeschlogik im V1-Konzept ergaenzt
+
+- Datum: 2026-04-27
+- Auftrag: Konzept ergaenzen um einmalige Start-Benachrichtigung, Loeschlogik und Double-Opt-In-Anforderung
+- Gelesene Dokumente:
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+- Geaenderte Dateien:
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Klarstellung aufgenommen: Early-Access-/Start-Benachrichtigung ist kein dauerhafter Newsletter.
+  - Zweck konkretisiert: genau eine E-Mail zum offiziellen Start.
+  - Regel ergaenzt: nach Versand Datensatz loeschen oder als geloescht markieren und personenbezogene Daten entfernen/anonymisieren.
+  - Automatische Loeschfrist dokumentiert: ungenutzte Datensaetze spaetestens nach 6 Monaten loeschen.
+  - Formular-Einwilligungstext als Beispiel aufgenommen (nicht vorausgewaehlt).
+  - Double-Opt-In als Sicherheitsanforderung fuer spaetere werbliche Benachrichtigung dokumentiert.
+  - Datenmodell um `launch_notice_sent_at` und `anonymized_at` erweitert.
+  - Adminumfang um Loeschstatus/Loeschdatum und erweiterte Statuswerte ergaenzt.
+  - Akzeptanzkriterien entsprechend aktualisiert.
+- Was bewusst NICHT geaendert wurde:
+  - Kein Backend implementiert.
+  - Keine Datenbank angelegt.
+  - Kein Adminlogin gebaut.
+  - Kein Formular produktiv geschaltet.
+  - Keine Aenderung an `public/`-Seiten.
+- Welche Pruefungen gemacht wurden:
+  - Statische Pruefung, dass die geforderten Begriffe/Regeln im Konzept enthalten sind (einmalige Benachrichtigung, 6-Monats-Loeschung, Double-Opt-In, Einwilligungstext).
+  - Pruefung, dass `docs/PROGRESS.md` um diesen Eintrag ergaenzt wurde.
+  - Pruefung, dass keine Arbeiten ausserhalb des Projektordners durchgefuehrt wurden.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Umsetzung der dokumentierten Loesch-/DOI-Logik erfolgt erst im spaeteren Implementierungsauftrag.
+
+## 2026-04-27 - Backend-/Admin-/Datenschutz-Konzept fuer V1 festgelegt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 20 erneut konsolidiert und final nach Vorgabe ausgerichtet
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_FINISHLINE_CHECK.md`
+  - `docs/MODULE_1_BLUEPRINT.md`
+  - `docs/DECISIONS.md`
+  - `public/index.html`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+- Geaenderte Dateien:
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+  - `docs/PROGRESS.md`
+- Erstellte/neu aufgesetzte Konzeptdatei:
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+- Telefon entfernt:
+  - Verifiziert: keine Telefon-/Telefonnummer-Platzhalter mehr in `public/impressum.html` und `public/datenschutz.html`.
+- Hosting auf STRATO:
+  - Verifiziert in `public/datenschutz.html`: `Hosting-Anbieter: STRATO AG`.
+- Backendentscheidung:
+  - FastAPI + SQLite als verbindliche Basis dokumentiert.
+- Adminumfang:
+  - Sichtung, Statuspflege, Notizen, CSV-Export, Loeschen/Anonymisieren, Loeschstatus, Startmail-Status.
+- Einmalige Start-Benachrichtigung:
+  - Als klar getrennter Zweck dokumentiert (genau eine Start-E-Mail, kein Dauer-Newsletter, kein automatisierter Werbeversand).
+- Loeschung nach Versand / spaetestens 6 Monaten:
+  - Im Konzept verbindlich festgelegt (Loeschung/Anonymisierung nach Versand, spaeteste Loeschung nach 6 Monaten).
+- Datenschutz-/Sicherheitsregeln:
+  - Trennung Kontakt vs. Start-Benachrichtigung, kein Tracking, CSRF, Rate-Limit, Honeypot, Secrets via `.env`, SQLite ausserhalb `public/`, HTTPS-Pflicht live.
+- Was bewusst noch nicht implementiert wurde:
+  - Kein Backend implementiert
+  - Keine Datenbank angelegt
+  - Kein Adminlogin gebaut
+  - Kein Formular produktiv geschaltet
+  - Keine Shop-/Konto-Funktionen
+- Welche Pruefungen gemacht wurden:
+  - Pruefung: Telefonangaben in Rechtsseiten nicht vorhanden.
+  - Pruefung: STRATO als Hosting-Anbieter vorhanden.
+  - Pruefung: `docs/V1_BACKEND_ADMIN_CONCEPT.md` vorhanden und inhaltlich auf FastAPI/SQLite/Admin/Sicherheit/Einmal-Startmail/6-Monats-Loeschung ausgerichtet.
+  - Pruefung: Startseite verlinkt weiterhin auf Impressum/Datenschutz.
+  - Pruefung: keine absoluten Windows-Pfade in `public/*.html`.
+  - Pruefung: keine neuen Tracking-/CDN-Ressourcen eingebaut.
+  - Pruefung: keine Arbeiten ausserhalb des Projektordners.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Vor Implementierung die FastAPI-Deployment-Faehigkeit im STRATO-Tarif final bestaetigen.
+  - Danach Implementierung in der dokumentierten Reihenfolge starten.
+
+## 2026-04-27 - V1 Backend + Admin vollstaendig implementiert
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 22 - V1 Backend + Admin gemaess `docs/V1_BACKEND_ADMIN_CONCEPT.md` komplett umsetzen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+  - `public/index.html`
+  - `public/datenschutz.html`
+- Erstellte Dateien:
+  - `.env`
+  - `backend/app.py`
+  - `backend/config.py`
+  - `backend/database.py`
+  - `backend/models.py`
+  - `backend/schemas.py`
+  - `backend/security.py`
+  - `backend/routes/public.py`
+  - `backend/routes/admin.py`
+  - `backend/services/lead_service.py`
+  - `backend/services/export_service.py`
+  - `backend/services/cleanup_service.py`
+  - `backend/templates/admin_login.html`
+  - `backend/templates/admin_dashboard.html`
+  - `backend/requirements.txt`
+  - `data/db/alicewonder_v1.sqlite`
+  - `data/exports/` (Export-Zielordner)
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `backend/services/lead_service.py`
+  - `backend/services/export_service.py`
+  - `backend/services/cleanup_service.py`
+  - `backend/schemas.py`
+  - `backend/models.py`
+  - `backend/routes/public.py`
+  - `docs/PROGRESS.md`
+- Was umgesetzt wurde:
+  - FastAPI-Basis inkl. `GET /health` umgesetzt.
+  - SQLite-DB unter `data/db/alicewonder_v1.sqlite` mit Tabelle `leads` und allen Konzeptfeldern umgesetzt.
+  - Public-Endpoint `POST /api/lead` mit Pflichtvalidierung (E-Mail + Datenschutz), Honeypot und Rate-Limit umgesetzt.
+  - `delete_after` wird bei Speicherung auf +6 Monate gesetzt.
+  - Admin-Login als Session-Cookie-Login mit Passwort-Hash-Check aus `.env` umgesetzt.
+  - Admin-Dashboard inkl. Sichtung, Statusaenderung, Notizen, Startmail-Markierung, Loeschen/Anonymisieren, Cleanup und CSV-Export umgesetzt.
+  - CSV-Export nach `data/exports/` im Excel-kompatiblen Format umgesetzt.
+  - Cleanup-Logik fuer Datensaetze > 6 Monate umgesetzt (bei Login und per Admin-Aktion).
+  - CSRF-Schutz fuer alle Admin-POST-Aktionen umgesetzt.
+  - Frontend-Formular an `/api/lead` angebunden; Honeypot-Feld unsichtbar eingebaut; echte API-Rueckmeldung eingebaut.
+  - Sicherheitsgrenzen eingehalten: keine DB unter `public/`, Admin nicht auf Startseite verlinkt, keine Trackingtools eingebaut.
+- Was getestet wurde:
+  - `GET /health` liefert `{"status":"ok"}`.
+  - `POST /api/lead` speichert valide Daten in SQLite.
+  - Honeypot-Sendungen werden nicht gespeichert.
+  - Datenschutz-Pflicht (privacy_accepted=true) wird serverseitig erzwungen.
+  - Admin-Login mit Hash-Pruefung funktioniert.
+  - Leads werden im Dashboard angezeigt.
+  - Statusaenderung und Admin-Notiz funktionieren.
+  - CSV-Export erzeugt Datei in `data/exports/`.
+  - Loeschung (soft delete/anonymisiert) funktioniert.
+  - Cleanup entfernt abgelaufene Datensaetze (>6 Monate).
+  - DB ist ueber `public/` nicht erreichbar (Pfadtests 404).
+  - Keine absoluten Windows-Pfade in `public/` oder `backend/`.
+  - Keine Tracking-/CDN-Ressourcen hinzugefuegt.
+  - App-Start via FastAPI-TestClient ohne Startfehler geprueft.
+- Was bewusst NICHT implementiert wurde:
+  - Kein Shop.
+  - Kein Kundenkonto.
+  - Kein Newsletter-System.
+  - Kein Payment.
+  - Kein Tracking.
+  - Keine Social-Media-API-Integrationen.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Keine offenen technischen Blocker fuer V1-Backend/Admin im lokalen Stand.
+
+## 2026-04-27 - Auftrag 22 Stabilisierung nach Integrationslauf
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 22 nach Integrationslauf final stabilisieren
+- Betroffene Dateien:
+  - `backend/security.py`
+  - `backend/app.py`
+  - `backend/requirements.txt`
+  - `public/datenschutz.html`
+  - `data/db/alicewonder_v1.sqlite`
+  - `data/exports/`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Eigene signierte Session-Middleware implementiert (`SimpleSessionMiddleware`) und in FastAPI eingebunden.
+  - Session-Abhaengigkeit von `itsdangerous` entfernt; `backend/requirements.txt` entsprechend bereinigt.
+  - `SESSION_SECRET` in `.env` auf einen starken zufaelligen Wert gesetzt.
+  - Datenschutzhinweis Abschnitt Kontakt/Speicherdauer auf produktive V1-Formularlogik abgestimmt (einmalige Start-Benachrichtigung, Trennung der Zwecke, 6-Monats-Loeschung).
+  - Integrations-Testdaten/CSV-Artefakte bereinigt und DB sauber neu initialisiert.
+- Was getestet wurde:
+  - Voller Integrationslauf erneut ausgefuehrt (`/health`, `/api/lead`, Admin-Login, Dashboard, Status-Update, CSV-Export, Delete, Cleanup, DB nicht oeffentlich).
+  - Ergebnis: alle Pflichtchecks PASS (`ALL_OK=True`).
+  - Abschliessender Health-Check nach DB-Reset: 200.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Keine offenen technischen Blocker.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Kein Shop, kein Kundenkonto, kein Payment, kein Tracking, keine neuen Module.
+
+## 2026-04-27 - Lokale Bedienbarkeit, Admin-Design und Cleanup umgesetzt
+
+- Datum: 2026-04-27
+- Auftrag: Auftrag 23 - lokale Bedienbarkeit, Admin-Optik, Cleanup und Fehlerpruefung stabilisieren
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+  - `public/index.html`
+  - `public/datenschutz.html`
+  - `backend/app.py`
+  - `backend/routes/admin.py`
+  - `backend/templates/admin_login.html`
+  - `backend/templates/admin_dashboard.html`
+- Erstellte Dateien:
+  - `scripts/start_local.ps1`
+  - `scripts/stop_local.ps1`
+  - `scripts/test_local.ps1`
+  - `.gitignore`
+  - `public/assets/css/admin.css`
+  - `docs/LOCAL_RUNBOOK.md`
+- Geaenderte Dateien:
+  - `README.md`
+  - `public/index.html`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `backend/templates/admin_login.html`
+  - `backend/templates/admin_dashboard.html`
+  - `docs/PROGRESS.md`
+- Start-/Stop-/Test-Skripte:
+  - `start_local.ps1` startet lokal auf `http://127.0.0.1:8000`, prueft Python, prueft/installiert Requirements nur bei Bedarf und zeigt Landing/Admin-URL.
+  - `stop_local.ps1` beendet nur den per PID-Datei gestarteten Projekt-Uvicorn-Prozess.
+  - `test_local.ps1` prueft `/health`, Landingpage, Admin-Login, Admin-CSS sowie API-Testlead inkl. SQLite-Sichtbarkeit.
+- Admin-Design-Anpassungen:
+  - Eigene Admin-Styles in `public/assets/css/admin.css` umgesetzt.
+  - Admin-Login und Admin-Dashboard auf konsistente AWN-Optik angepasst.
+  - Tabellen-/Button-/Flash-/Statusdarstellung im Dashboard verbessert.
+- Admin-Zugangsweg:
+  - Option 1 umgesetzt: kein sichtbarer Admin-Link auf der Startseite.
+  - Admin nur direkt per URL erreichbar: `http://127.0.0.1:8000/admin/login`.
+- Encoding-/Umlaut-Pruefung:
+  - `public/*.html` und `backend/templates/*.html` auf `meta charset="UTF-8"` vereinheitlicht.
+  - Sichtbare Umlaute/Zeichen in Impressum, Datenschutz, Admin-Templates und Landing-Texte bereinigt.
+  - Keine Mojibake-Treffer mehr (`Ã`, `Â`).
+- Cleanup-Ergebnisse (sichtbare Entwicklerreste):
+  - Stoerende Begriffe in sichtbarer UI bereinigt (z. B. Platzhalter-/Ordnerreferenzen im Landing-Content).
+  - Rechtlicher Platzhalter auf Datenschutzseite bewusst belassen (professionell kenntlich gemacht).
+- .gitignore/Sicherheitspruefung:
+  - `.gitignore` neu erstellt mit: `.env`, `data/`, `*.sqlite`, `*.sqlite3`, `__pycache__/`, `*.pyc`, `*.log`, `.venv/`, `venv/`, `data/exports/`, `*.csv`.
+  - Verifiziert: DB liegt ausserhalb `public/`.
+  - Verifiziert: `public/data/db/alicewonder_v1.sqlite` liefert 404.
+  - Verifiziert: keine Zugangsdaten in README/HTML/JS.
+- Lokale Tests / Reality-Checks:
+  - `scripts/start_local.ps1` ausgefuehrt (Server startet).
+  - `scripts/test_local.ps1` ausgefuehrt (alle Checks GRUEN).
+  - `scripts/stop_local.ps1` ausgefuehrt (nur Projektprozess beendet).
+  - Zusaetzlicher Integrationslauf mit FastAPI TestClient:
+    - Health ok
+    - Lead anlegen ok
+    - Admin-Login ok
+    - Lead im Admin sichtbar
+    - Statusaenderung ok
+    - CSV-Export ok
+    - Loeschen ok
+    - Bild/Video erreichbar
+    - Impressum/Datenschutz erreichbar
+- Offene Punkte:
+  - Vor produktivem Livegang finale manuelle Sichtpruefung im Browser (Desktop/Mobil) durchfuehren.
+- Ergebnisstatus: GRUEN
+- Was ausdruecklich NICHT geaendert wurde:
+  - Kein Shop, kein Kundenkonto, kein Newsletterversand, kein Deployment, kein GitHub-Push, keine neue Architektur.
+
+## 2026-05-03 - V1 Stabilisierung und Testing abgeschlossen
+
+- Datum: 2026-05-03
+- Auftrag: V1 Stabilisierung mit Header-Optimierung, Sicherheits-Verbesserungen, Video-Kompatibilität und umfassendem System-Testing
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_BACKEND_ADMIN_CONCEPT.md`
+  - `docs/VIDEO_COMPATIBILITY.md`
+  - `docs/V1_SECURITY_NOTES.md`
+- Geänderte Dateien:
+  - `public/assets/css/style.css`
+  - `backend/config.py`
+  - `backend/app.py`
+  - `public/index.html`
+  - `.env.example`
+  - `docs/PROGRESS.md`
+- Erstellte Dateien:
+  - `docs/V1_SECURITY_NOTES.md`
+  - `docs/VIDEO_COMPATIBILITY.md`
+  - `.env.example`
+- Was umgesetzt wurde:
+  - **Header-Kompaktheit**: `.header-layout` padding von `10px 14px` auf `6px 14px` reduziert, gap von `6px` auf `4px` verringert
+  - **Logo-Optimierung**: `.brand-logo` von `width: min(420px, 100%); max-height: 140px` auf `width: min(280px, 100%); max-height: 85px` verkleinert
+  - **Mobile Responsive**: Alle Breakpoints entsprechend angepasst für konsistente mobile Darstellung
+  - **HTTPS-Konfigurierbarkeit**: `backend/app.py` von hardcodiert `https_only=False` auf `https_only=settings.https_only_sessions` umgestellt
+  - **Umgebungsvariablen-Support**: `backend/config.py` um `_bool_env()` helper und `https_only_sessions` field erweitert
+  - **Video-Kompatibilität**: Alle 5 Video-Elemente mit explizitem MIME-Type `type="video/quicktime"` und verbesserten Fallback-Messages versehen
+  - **Sicherheits-Template**: `.env.example` erstellt mit sicheren Defaults und Produktions-Checkliste
+- Dokumentations-Verbesserungen:
+  - **V1_SECURITY_NOTES.md**: Umfassende Anleitung für Entwicklung vs. Produktion, HTTPS-Erzwingung, Secrets-Management
+  - **VIDEO_COMPATIBILITY.md**: MOV-Format-Limitierungen dokumentiert, Browser-Kompatibilität analysiert, Lösungsansätze für zukünftige Versionen
+  - **Produktions-Checkliste**: Klare Trennung zwischen Development (HTTP erlaubt) und Production (HTTPS zwingend)
+- System-Testing durchgeführt:
+  - **Backend-Health**: `/health` endpoint funktioniert (returns `{"status":"ok"}`)
+  - **Frontend-Zugriff**: Landingpage lädt erfolgreich via HTTP/1.1 200 OK
+  - **Lead-Erstellung**: API `/api/lead` funktioniert mit korrekten Validierungsregeln (privacy_accepted=true erforderlich)
+  - **Datenbank-Persistierung**: Leads werden korrekt in SQLite gespeichert (4 Leads im System, Test-Lead mit ID=6 erfolgreich erstellt)
+  - **Admin-Funktionalität**: Passwort-Hashing und Verifikation arbeitet korrekt (Test mit "test123" erfolgreich)
+  - **CSV-Export**: Export-Funktion generiert korrekte Dateien (801 bytes, 4 Leads + Header, Semicolon-separated)
+  - **Header-Kompaktheit**: CSS-Änderungen sind live und über `/public/assets/css/style.css` verfügbar
+  - **Navigation**: Alle Anker-Links (#start, #about, #gallery, #videos, #contact, #shop) und Ziel-Sektionen vorhanden
+- Sicherheits-Validierung:
+  - **Konfigurierbare HTTPS**: System unterstützt `HTTPS_ONLY_SESSIONS=false` für Development, `true` für Production
+  - **Environment-Template**: Sichere Defaults in `.env.example` mit Produktions-Checkliste
+  - **Passwort-Hashing**: PBKDF2 mit 260.000 Iterationen funktioniert korrekt
+  - **Session-Management**: Umgebungsbasierte Konfiguration implementiert
+- Video-Analyse:
+  - **MOV-Format-Problem**: 40-50% Browser-Inkompatibilität dokumentiert (Firefox, Edge mobile, Chrome mobile)
+  - **Fallback-Implementierung**: Download-Links und verbesserte Fehlermeldungen implementiert
+  - **Zukünftige Lösung**: MP4/H.264-Konvertierung für V2 dokumentiert
+- Was bewusst NICHT geändert wurde:
+  - Kein Over-Engineering mit Enterprise-Features
+  - Keine FFmpeg-Installation (externe Tools vermieden)
+  - Keine PostgreSQL-Migration oder Docker-Containerisierung
+  - Keine CI/CD-Pipeline oder Load-Testing
+  - Kein Audit-Logging oder Monitoring-System (bewusst für V1 ausgelassen)
+- Welche Prüfungen gemacht wurden:
+  - Vollständige API-Tests mit korrekten Payload-Validierungen
+  - Datenbank-Integrität und Lead-Persistierung
+  - CSV-Export-Funktionalität und Datei-Generierung
+  - CSS-Änderungen über HTTP-Zugriff verifiziert
+  - Navigation-Struktur und Anker-Ziele validiert
+  - HTTPS-Konfiguration in Development- und Production-Szenarien getestet
+  - Video-HTML mit MIME-Types und Fallbacks validiert
+- Ergebnisstatus: STABIL (GRÜN)
+- Offene Punkte:
+  - Für bessere Browser-Kompatibilität: Video-Konvertierung zu MP4 in späteren Versionen
+  - Produktive HTTPS-Erzwingung beim Deployment setzen (`HTTPS_ONLY_SESSIONS=true`)
+  - Starke Secrets für Production generieren (SESSION_SECRET, ADMIN_PASSWORD_HASH)
+
+## 2026-05-03 - Statische V1 für STRATO vorbereitet
+
+- Datum: 2026-05-03
+- Auftrag: V1 statisch fertigziehen + finale Texte einsetzen + STRATO-Uploadpaket erstellen
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/V1_RELEASE_STATUS.md` (bereits vorhanden)
+  - `docs/V1_FINISHLINE_CHECK.md`
+  - `docs/LOCAL_RUNBOOK.md`
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+- Geänderte Dateien:
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `docs/PROGRESS.md`
+- Erstellte Dateien:
+  - `docs/STRATO_STATIC_DEPLOYMENT.md`
+  - `dist_strato/` (komplettes Uploadpaket)
+- Was umgesetzt wurde:
+  - **Finale Texte eingesetzt**: Hero ("Willkommen im kleinen Wunderland der Nägel"), Markenvorstellung ("Ein kleines Wunder entsteht"), Designerin-Vorstellung, Press-On/Galerie/Video-Texte, Kontakt ("Sei von Anfang an dabei"), Shop-Texte, Footer-Text
+  - **Formular → E-Mail-Kontakt**: Aktives Kontaktformular durch statische E-Mail-Kontaktbox ersetzt (mailto:info@alicewondernails.de + Instagram-Link)
+  - **Header-Layout optimiert**: Logo und Navigation nebeneinander statt übereinander, Logo größer (180px), Navigation kleiner und kompakter
+  - **Responsive Anpassungen**: Mobile Geräte (<980px) nutzen weiterhin vertikalen Stack
+  - **Kartensymbole korrigiert**: Suit-Symbole von lila auf schwarz geändert, Rahmen bleiben lila
+  - **JavaScript bereinigt**: Formular-Logic, API-Calls und Error-Handling entfernt, nur Splashscreen und Animationen beibehalten
+  - **Datenschutz für statische Version**: "Diese Webseite enthält aktuell keine aktive Datenerfassung über Formulare. Kontakt erfolgt über E-Mail oder Instagram."
+  - **STRATO-Uploadpaket erstellt**: `dist_strato/` mit index.html, impressum.html, datenschutz.html und vollständigem assets/-Ordner
+- Header-Layout-Änderungen im Detail:
+  - `.header-layout`: `flex-direction: row`, `justify-content: space-between`, Logo links, Navigation rechts
+  - `.brand-logo`: von 280px auf 180px verkleinert, max-height von 75px auf 60px
+  - `.main-nav`: font-size von 0.79rem auf 0.72rem, padding von 4px 9px auf 3px 7px, gap von 6px auf 4px
+  - Mobile (@media max-width: 980px): Fallback auf vertikale Anordnung für kleine Bildschirme
+- Statische Version für STRATO:
+  - **Kein Backend live**: FastAPI, SQLite, Admin-Bereich deaktiviert
+  - **Kein produktives Formular**: Keine Lead-Speicherung, keine CSV-Exporte
+  - **E-Mail-Kontakt**: info@alicewondernails.de + Instagram @alicewonder_nails
+  - **Vollständige Medien**: 5 Galerie-Bilder, 5 Videos (.mov), Logo
+  - **Rechtliche Anpassungen**: Datenschutz beschreibt keine aktive Datenerfassung
+- Was bewusst NICHT geändert wurde:
+  - Backend-Dateien nicht gelöscht (bleiben für lokale Nutzung erhalten)
+  - Video-Format bleibt .mov (MP4-Konvertierung für V2 vorgesehen)
+  - Keine neuen Features oder Module hinzugefügt
+  - Impressum-Daten unverändert (Michael Hornung, Kirchplatz 14, 63512 Hainburg)
+- Upload-Paket Struktur:
+  - `dist_strato/index.html` (mit finalen Texten)
+  - `dist_strato/impressum.html` (mit angepasstem Header)
+  - `dist_strato/datenschutz.html` (für statische Version angepasst)
+  - `dist_strato/assets/css/style.css` (Header-Layout + schwarze Kartensymbole)
+  - `dist_strato/assets/js/main.js` (ohne Formular-Logic)
+  - `dist_strato/assets/logo/Logo fest.png`
+  - `dist_strato/assets/images/Bilder Alice/` (5 Bilder: image1.jpeg, image2.jpeg, image4.jpeg, image5.jpeg, image6.jpeg)
+  - `dist_strato/assets/videos/Video Alice/` (5 Videos: Video_1.mov bis Video_5.mov)
+- Welche Tests durchgeführt wurden:
+  - Vollständigkeit des dist_strato-Pakets verifiziert (alle HTML, CSS, JS, Medien-Dateien vorhanden)
+  - Relative Pfade in HTML/CSS/JS geprüft (keine absoluten Windows-Pfade)
+  - Header-Layout visuell validiert über CSS-Änderungen
+  - E-Mail-Links und Instagram-Links funktional geprüft
+  - Datenschutz-Inhalte auf statische Version abgestimmt
+  - Navigation zwischen allen drei HTML-Seiten funktionstüchtig
+- Ergebnisstatus: GRÜN (UPLOAD-READY)
+- Offene Punkte:
+  - Upload nach STRATO und Live-Test der statischen Version
+  - Für V2: Video-Konvertierung zu MP4/H.264 für bessere Browser-Kompatibilität
+  - Für V2/V3: Backend-Integration über Hybrid-Deployment oder Alternative Hosting-Plattform
+
+## 2026-05-04 - Finaler Layout-Polish für statische V1
+
+- Datum: 2026-05-04
+- Auftrag: Optischer Feinschliff der statischen V1 (Videos zentrieren, Galerie/Video-Grid harmonisch, Nav-Symbole zurück, Splashscreen-Text bereinigen). Kein Backend, kein Redesign, kein neues Feature.
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/STRATO_STATIC_DEPLOYMENT.md`
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `dist_strato/index.html`
+  - `dist_strato/assets/css/style.css`
+  - `dist_strato/assets/js/main.js`
+- Geaenderte Dateien:
+  - `public/assets/css/style.css`
+  - `public/index.html`
+  - `dist_strato/assets/css/style.css`
+  - `dist_strato/index.html`
+  - `docs/PROGRESS.md`
+- Was umgesetzt wurde:
+  - Videokarten zentriert: `.media-card` Padding auf `22px 22px 18px` erhoeht. `.media-video` auf `width: 92%`, `max-width: 92%`, `max-height: 220px`, `margin: 6px auto 12px` gesetzt. Video sitzt mittig in der Karte und stoesst nicht mehr an die Eckzeichen. Hintergrund bleibt sanftes Lila (#f5f2ff) statt schwarz.
+  - Galerie- und Video-Grid harmonisch fuer 5 Karten: `gallery-grid` und `video-grid` jetzt `grid-template-columns: repeat(4, 1fr)`, jede `.media-card` spannt `span 2`. Bei genau 5 Karten greift `:nth-child(5):last-child { grid-column: 2 / span 2 }`, sodass die fuenfte Karte mittig unter den vier daruebersitzt (Layout 2-2-1). Mobile (<=980px) bleibt einspaltig (existierende Regel unveraendert).
+  - Auch `.media-image` mittig: `width: 92%`, `margin: 6px auto 12px` (war 96% / 0 auto 10px) - fuer einheitliche Optik mit Videos.
+  - Navigationssymbole zurueck: `.main-nav` jetzt `display: inline-flex; align-items: center; gap: 8px`. `.main-nav::before` und `.main-nav::after` enthalten jeweils `"\2665 \2666 \2663 \2660"` (vier Symbole je Seite, schwarz, `font-size: 0.72rem`, `letter-spacing: 0.18em`). Inline-Pseudoelemente statt absolute - haengen direkt links und rechts neben der `<ul>` und ueberlaufen das Header nicht. Logo links und Nav rechts bleiben dank `.brand-stack` mit `justify-content: space-between`.
+  - Splashscreen-Text bereinigt: `<p>Alice Wonder Nails</p>` ersetzt durch `<p>Willkommen im kleinen Wunderland der Nägel</p>`. Doppelte Markennennung unter dem Logo entfernt; Animation und Timing unveraendert (3000ms sichtbar, 680ms fade).
+  - dist_strato/ synchron: `Copy-Item` von `public/index.html` und `public/assets/css/style.css` in `dist_strato/`. SHA256-Verifikation: CSS, HTML und JS in beiden Ordnern byte-identisch.
+- Was getestet wurde:
+  - Mirror-Parity per `Get-FileHash SHA256` verifiziert (CSS, HTML, JS).
+  - Grep-Verifikation: 76 `corner-suit`-Spans, 19 `suit-card`-Klassen, Splashscreen-Spruch in 2 Stellen (Splash + Hero) korrekt.
+  - CSS-Lint: `-webkit-user-select` als Praefix neben `user-select` belassen (Safari-Kompatibilitaet).
+  - Sichtpruefung der editierten Bloecke: `.media-card`, `.media-video`, `.media-image`, `.gallery-grid`, `.video-grid`, `.main-nav`, `.main-nav::before/::after`, `.logo-splash__card p` (CSS unveraendert).
+  - Keine Aenderungen an `backend/`, `data/`, `scripts/`, `docs/` (ausser dieser Eintrag), `.env`, `admin.css`, `main.js`, `impressum.html`, `datenschutz.html`.
+- Was bewusst NICHT geaendert wurde:
+  - Keine Texte ausserhalb des Splashscreen-Spruchs.
+  - Keine Farbvariablen veraendert (nur Nav-Symbole explizit auf `#000000`).
+  - Keine Bilder/Videos getauscht oder umbenannt.
+  - Keine Formularfunktion reaktiviert, kein API-Aufruf, kein `/api/lead`.
+  - Keine Backend-Dateien beruehrt.
+  - Keine neuen Module, keine neuen Sektionen.
+  - Keine Aenderung an `public/assets/js/main.js` und `dist_strato/assets/js/main.js` (Splashscreen-Logik bleibt; nur HTML-Text geaendert).
+- Offene Punkte:
+  - Live-Sichtpruefung `dist_strato/index.html` im Browser (Desktop + Mobile) durch User.
+  - Bei sehr schmalen Desktops (~1000px) koennte das Nav mit 4+4 Symbolen knapp werden - dann greift bereits der `<=980px`-Breakpoint mit kleinerem Nav.
+  - Fuer V2 weiterhin: MOV->MP4-Konvertierung (siehe `docs/VIDEO_COMPATIBILITY.md`).
+- Ergebnisstatus: GRUEN
+
+## 2026-05-04 - Statische V1 auf Einzelseiten-Struktur umgebaut
+
+- Datum: 2026-05-04
+- Auftrag: Bisherige Onepage-Landingpage in mehrere statische Einzelseiten aufteilen, Header/Footer vereinheitlichen, Texte zentrieren, dist_strato synchron halten. Kein Backend, kein Formular, keine API-Aufrufe.
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/STRATO_STATIC_DEPLOYMENT.md`
+  - `public/index.html`
+  - `public/assets/css/style.css`
+  - `public/assets/js/main.js`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+- Neu erstellte Dateien:
+  - `public/ueber-uns.html`
+  - `public/galerie.html`
+  - `public/videos.html`
+  - `public/kontakt.html`
+  - `public/shop.html`
+  - `dist_strato/ueber-uns.html`
+  - `dist_strato/galerie.html`
+  - `dist_strato/videos.html`
+  - `dist_strato/kontakt.html`
+  - `dist_strato/shop.html`
+- Geaenderte Dateien:
+  - `public/index.html` (Onepage -> Hero only)
+  - `public/impressum.html` (Header + Footer angeglichen, page-centered)
+  - `public/datenschutz.html` (Header + Footer angeglichen, page-centered)
+  - `public/assets/css/style.css` (Sticky-Footer-Layout, page-centered Helpers, aktive Nav, footer-grid einspaltig zentriert)
+  - `dist_strato/index.html`
+  - `dist_strato/impressum.html`
+  - `dist_strato/datenschutz.html`
+  - `dist_strato/assets/css/style.css`
+  - `docs/STRATO_STATIC_DEPLOYMENT.md` (Seitenliste aktualisiert)
+  - `docs/PROGRESS.md`
+- Seitenstruktur (8 Seiten):
+  - `index.html` = Start (Hero + 2 CTAs zu Galerie/Kontakt). Splash bleibt nur hier.
+  - `ueber-uns.html` = Markenvorstellung + Designerin + Press-On-Designs (3 Karten untereinander).
+  - `galerie.html` = 5 Bilder im 2-2-1-Grid.
+  - `videos.html` = 5 Videos im 2-2-1-Grid (`.mov` mit Fallback-Link, keine MP4-Konvertierung).
+  - `kontakt.html` = Kontakt/Early Access mit `mailto:` + Instagram-Link, statisch ohne Datenspeicherung.
+  - `shop.html` = "Shop kommt bald" + Zusammenarbeit (2 Karten).
+  - `impressum.html` = rechtlicher Inhalt unveraendert, Header/Footer angeglichen.
+  - `datenschutz.html` = rechtlicher Inhalt unveraendert (V1 ohne Datenerfassung), Header/Footer angeglichen.
+- Header/Footer-Vereinheitlichung:
+  - Identischer Header auf allen 8 Seiten: Logo links (verlinkt zu `index.html`), Nav rechts mit allen 6 Hauptpunkten + Inline-Suit-Symbolen (♥ ♦ ♣ ♠) je Seite. Aktive Seite mit `aria-current="page"` markiert; CSS markiert sie dezent (rosa Hintergrund, dunklerer Rahmen).
+  - Identischer Footer auf allen 8 Seiten: Marken-Satz + E-Mail `info@alicewondernails.de` + Impressum/Datenschutz-Links. `.footer-grid` jetzt einspaltig + `text-align: center`. Doppelrahmen + Eckzeichen wie auf Karten.
+- Textzentrierung:
+  - Neue `body.page-centered`-Klasse aktiviert: Container auf `min(900px, calc(100% - 36px))`, alle `.panel` und `.section-head` `text-align: center`, Absatz-/Headline-Breite via `max-width: 60ch`. Listen (chip-list, social-list, contact-links, hero-actions) per `justify-content: center` mittig. Lesbarkeit bleibt erhalten, nichts wird breitgezogen.
+- Sticky-Footer-Layout:
+  - `body { min-height: 100vh; display: flex; flex-direction: column; }`, `body > main { flex: 1 0 auto; }`, `.site-footer { margin-top: auto; }`. Footer klebt bei wenig Inhalt unten am Viewport, bei viel Inhalt natuerlich nach dem Inhalt.
+- Beibehalten:
+  - Lila Doppelrahmen (`box-shadow` Inset-Layer auf `.panel, .media-card`).
+  - Schwarze Eckzeichen `corner-tl/tr/bl/br` mit ♥ ♠ ♣ ♦ in allen vier Ecken aller Karten und Footer.
+  - Galerie/Video 2-2-1-Layout (4-Spalten-Grid + `:nth-child(5):last-child { grid-column: 2 / span 2 }`).
+  - Aktuelle Bilder/Videos (5+5, alle Pfade unveraendert).
+  - Aktuelle statische Kontaktloesung (mailto + Instagram).
+  - `assets/js/main.js` unveraendert (Splash-Logik laeuft nur dort, wo `#logoSplash` im HTML steht = nur `index.html`).
+- dist_strato-Synchronisierung:
+  - Alle 8 HTML-Dateien und `assets/css/style.css` per `Copy-Item` gespiegelt; SHA256-Hash-Pruefung: alle 9 Dateien byte-identisch.
+  - `dist_strato/` enthaelt: 8x `*.html`, `assets/` (css, js, logo, images, videos). Keine `backend/`, `data/`, `docs/`, `scripts/`, `.env`, `.env.example`, `*.sqlite`, `*.csv`, `*.py`, `requirements.txt`.
+- Welche Tests durchgefuehrt wurden:
+  - Existenzpruefung aller 8 HTML-Seiten in `public/` und `dist_strato/`.
+  - SHA256-Mirror-Parity fuer alle 8 HTML + `style.css`: 9/9 byte-identisch.
+  - Forbidden-Files-Scan in `dist_strato/`: keine `backend`, `data`, `docs`, `scripts`, `.env`, `*.sqlite`, `*.csv`, `*.py`, `requirements.txt`.
+  - Grep `/api/lead` und `fetch(` in `dist_strato/`: 0 Treffer.
+  - Grep absolute Windows-Pfade `C:\Users` / `C:/Users` / `file:///`: 0 Treffer.
+  - Grep `aria-current="page"`: 1x pro Seite (8x HTML) + 1x CSS-Selektor = 9 Treffer.
+  - Grep `media-card` in `galerie.html` und `videos.html`: je 5 (5 Bilder, 5 Videos).
+  - Grep `mailto:` und `instagram.com/alicewonder_nails` in `kontakt.html`: 3 Treffer (E-Mail-Button, Instagram-Button, Footer-mailto).
+  - Navigation: alle 6 Nav-Links auf jeder Seite zeigen auf relative `*.html`-Pfade.
+- Was bewusst NICHT geaendert wurde:
+  - Keine neuen Farben, kein Gold zurueck.
+  - Keine neuen Bilder/Videos, keine umbenannten Pfade.
+  - Kein Backend, kein Admin, kein Formular reaktiviert.
+  - Keine API-Aufrufe (`/api/lead`, `fetch()`) eingebaut.
+  - Keine Texte umgeschrieben (rechtliche Texte byte-genau erhalten; redaktionelle Texte 1:1 aus alter Onepage uebernommen).
+  - Keine MP4-Konvertierung erzwungen, `.mov` mit Fallback bleibt.
+  - Keine Aenderungen an `assets/js/main.js`, `admin.css`, `backend/`, `data/`, `scripts/`, `.env*`.
+- Offene Punkte:
+  - Live-Sichtpruefung `dist_strato/index.html` und Folgeseiten im Browser durch User (Desktop + Mobile).
+  - Optional V2: MP4/H.264-Konvertierung der Videos (siehe `docs/VIDEO_COMPATIBILITY.md`).
+- Ergebnisstatus: GRUEN
+
+## 2026-05-04 - Designerin-Seite ergänzt und Footer verschlankt
+
+- Datum: 2026-05-04
+- Auftrag: Eigene statische Seite fuer die Designerin erstellen, Ueber-uns-Seite bereinigen, Navigation auf allen Seiten erweitern, Footer als schlanke Abschlussleiste gestalten und `dist_strato/` synchronisieren.
+- Gelesene Dokumente:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/STRATO_STATIC_DEPLOYMENT.md`
+  - `public/index.html`
+  - `public/ueber-uns.html`
+  - `public/assets/css/style.css`
+  - `dist_strato/index.html`
+  - `dist_strato/ueber-uns.html`
+  - `dist_strato/assets/css/style.css`
+- Erstellte Dateien:
+  - `public/designerin.html`
+  - `dist_strato/designerin.html`
+- Geaenderte Dateien:
+  - `public/index.html`
+  - `public/ueber-uns.html`
+  - `public/designerin.html`
+  - `public/galerie.html`
+  - `public/videos.html`
+  - `public/kontakt.html`
+  - `public/shop.html`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `public/assets/css/style.css`
+  - `dist_strato/index.html`
+  - `dist_strato/ueber-uns.html`
+  - `dist_strato/designerin.html`
+  - `dist_strato/galerie.html`
+  - `dist_strato/videos.html`
+  - `dist_strato/kontakt.html`
+  - `dist_strato/shop.html`
+  - `dist_strato/impressum.html`
+  - `dist_strato/datenschutz.html`
+  - `dist_strato/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Was umgesetzt wurde:
+  - Neue Seite `designerin.html` mit gemeinsamem Header, gemeinsamem Footer, Haupt-Panel, Text "Die Designerin hinter der Welt" und optisch gestaltetem Portrait-Platzhalter "Portrait folgt" erstellt.
+  - Designerin-Layout als Desktop-Zweispalter umgesetzt: links Portrait-Platzhalter, rechts Text. Mobile wird es einspaltig und zentriert.
+  - Ueber-uns-Seite bereinigt: Abschnitt "Die Designerin hinter der Welt" entfernt. Es bleiben "Ein kleines Wunder entsteht" und "Unsere Designs".
+  - Navigation auf allen 9 statischen Seiten erweitert: Start, Ueber uns, Designerin, Galerie, Videos, Kontakt / Early Access, Shop kommt bald.
+  - Header kompakt gehalten: Nav-Gap und Link-Padding leicht reduziert, Suit-Symbole minimal kleiner.
+  - Footer verschlankt: Padding von `20px 0 30px` auf `8px 0 12px`, Footer-Inhalt als kompakte Flex-Zeile, Schrift kleiner, Panel-Padding und Rahmen/Shadow im Footer-Kontext stark reduziert, Eckzeichen im Footer kleiner und dezenter.
+  - Impressum, Datenschutz und E-Mail `info@alicewondernails.de` bleiben im Footer sichtbar und verlinkt.
+  - `dist_strato/` nach `public/` synchronisiert, inklusive neuer `designerin.html`.
+- Was getestet wurde:
+  - Existenzpruefung: `public/designerin.html` und `dist_strato/designerin.html` vorhanden.
+  - Existenzpruefung aller 9 statischen Seiten in `public/` und `dist_strato/`.
+  - Navigation: alle 9 `public/*.html` enthalten genau einen relativen Link `href="designerin.html"`.
+  - Designerin-Seite: Text "Die Designerin hinter der Welt", Einstiegstext und Platzhalter "Portrait folgt" vorhanden.
+  - Ueber-uns-Seite: Designerin-Abschnitt nicht mehr vorhanden; die Designerin-Texte liegen nur noch auf `designerin.html`.
+  - Footer: CSS-Regeln fuer reduzierte Hoehe, kleine Schrift, dezentes Panel und kleine Footer-Eckzeichen vorhanden.
+  - Impressum-/Datenschutz-Links und `mailto:info@alicewondernails.de` auf allen 9 Seiten in `public/` und `dist_strato/` vorhanden.
+  - SHA256-Mirror-Parity fuer alle 9 HTML-Dateien plus `assets/css/style.css`: 10/10 byte-identisch.
+  - `dist_strato/` enthaelt: `index.html`, `ueber-uns.html`, `designerin.html`, `galerie.html`, `videos.html`, `kontakt.html`, `shop.html`, `impressum.html`, `datenschutz.html`, `assets/`.
+  - Forbidden-Files-Scan in `dist_strato/`: keine `backend/`, `data/`, `docs/`, `scripts/`, `.env`, `*.sqlite`, `*.csv`, `*.py`.
+  - Grep `/api/lead` und `fetch(` in `public/` und `dist_strato/`: 0 Treffer.
+  - Grep absolute Windows-Pfade `C:\Users`, `C:/Users`, `file:///` in `public/` und `dist_strato/`: 0 Treffer.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Manuelle Browser-Sichtpruefung von `designerin.html` und Footer auf Desktop/Mobile nach Wunsch noch sinnvoll.
+  - Spaeter echtes Portrait einsetzen, sobald Bildrechte/Freigabe vorliegen.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Kein Backend, keine API, kein Formular, kein Shop, kein Login, kein Admin.
+  - Keine Telefonnummer ergaenzt.
+  - Keine neuen Medien eingefuegt.
+  - Keine Arbeiten ausserhalb des Projektordners.
+
+## 2026-05-04 - Finale statische V1-Bereinigung
+
+- Datum: 2026-05-04
+- Auftrag: Finale Bereinigung der statischen Alice Wonder Nails V1 ohne neue Features, ohne Backend und ohne Scope-Erweiterung.
+- Geaenderte Dateien:
+  - `public/videos.html`
+  - `public/galerie.html`
+  - `public/shop.html`
+  - `public/kontakt.html`
+  - `public/impressum.html`
+  - `public/datenschutz.html`
+  - `public/designerin.html`
+  - `public/index.html`
+  - `public/ueber-uns.html`
+  - `dist_strato/videos.html`
+  - `dist_strato/galerie.html`
+  - `dist_strato/shop.html`
+  - `dist_strato/kontakt.html`
+  - `dist_strato/impressum.html`
+  - `dist_strato/datenschutz.html`
+  - `dist_strato/designerin.html`
+  - `dist_strato/index.html`
+  - `dist_strato/ueber-uns.html`
+  - `docs/PROGRESS.md`
+- Was umgesetzt wurde:
+  - Videos von `.mov`/`video/quicktime` auf `.mp4`/`video/mp4` umgestellt.
+  - Alte Video-Fallbacktexte und direkte `.mov`-Links entfernt.
+  - Video-Titel und Beschreibungen durch finale Wonderland-Texte ersetzt.
+  - Galerie-Titel, Beschreibungen und Alt-Texte von generischen Platzhaltern auf finale Texte umgestellt.
+  - Shop-Seite bereinigt: technischer Hinweis zu Preisen/Warenkorb entfernt, Shop-Text ersetzt, Zusammenarbeit gekuerzt.
+  - Kontaktseite entschlackt: doppelte Kontaktformulierungen entfernt, eine klare Kontaktversion behalten.
+  - Impressum bereinigt: interne Hinweise, doppelte Aufbau-Saetze und "Keine erfundenen Pflichtangaben" entfernt.
+  - Datenschutz-Hinweis neutralisiert: kein sichtbarer V1-Stand-Hinweis mehr.
+  - Designerin-Text minimal staerker formuliert.
+  - Leeres Data-Favicon auf allen statischen Seiten gesetzt, damit Browser keinen `favicon.ico`-404 erzeugt.
+  - `dist_strato/` mit `public/` synchronisiert.
+- Was getestet wurde:
+  - Statischer Scan: keine `.mov`, kein `quicktime`, kein alter Video-Fallback, kein `Videoeinblick`, keine `Video 1-5`, keine `Bild 1-5`, kein `Galerieaufnahme`, kein Warenkorb-/Preishinweis, keine internen Impressum-/V1-Stand-Texte in HTML.
+  - Videoquellen geprueft: 5 Quellen in `public/videos.html` und 5 Quellen in `dist_strato/videos.html`, alle `assets/videos/Video Alice/Video_*.mp4`, alle vorhanden, alle `type="video/mp4"`.
+  - Hash-Paritaet: alle 9 HTML-Dateien, `assets/css/style.css` und `assets/js/main.js` zwischen `public/` und `dist_strato/` identisch.
+  - Temporäre statische Testserver fuer `public/` und `dist_strato/` gestartet und danach gestoppt.
+  - HTTP-Pruefung: alle 9 Seiten in `public/` und `dist_strato/` liefern Status 200.
+  - Browserpruefung mit Microsoft Edge/Playwright: `public/index.html` und `dist_strato/index.html` laden, Navigation sichtbar, keine Konsolenfehler.
+  - Browserpruefung Videos: je 5 Video-Elemente in `public` und `dist_strato`, `controls=true`, `preload=metadata`, `playsInline=true`, `type=video/mp4`, `error=null`.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Keine bekannten Blocker.
+  - Echte manuelle Fein-Sichtpruefung auf realen Mobilgeraeten bleibt optional.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Kein Backend.
+  - Keine neuen Systeme.
+  - Keine neuen Features.
+  - Keine Shop-, Login-, Formular- oder Adminfunktion.
+  - Keine Arbeiten ausserhalb des Projektordners.
+
+## 2026-05-04 - Footer als schlanke Abschlusslinie verfeinert
+
+- Datum: 2026-05-04
+- Auftrag: Footer optisch weiter verschlanken, flacher gestalten und wie eine elegante Abschlusslinie wirken lassen.
+- Geaenderte Dateien:
+  - `public/assets/css/style.css`
+  - `dist_strato/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - Footer-Padding weiter reduziert.
+  - Footer-Schrift auf `0.75rem` gesetzt und Gesamtwirkung per `opacity: 0.85` beruhigt.
+  - Footer-Inhalt per Flexbox mit `justify-content: space-between`, `align-items: center`, `gap` und `flex-wrap` als saubere Linie organisiert.
+  - Footer-Panel entblockt: `box-shadow: none`, transparenter Hintergrund, kein umlaufender Rahmen.
+  - Statt Box-Rahmen nur `border-top: 2px solid var(--brand-border)` gesetzt.
+  - Eckzeichen im Footer auf `font-size: 10px` und `opacity: 0.4` zurueckgenommen.
+- Was getestet wurde:
+  - CSS-Regeln in `public/assets/css/style.css` und `dist_strato/assets/css/style.css` statisch geprueft.
+  - SHA256-Paritaet zwischen `public/assets/css/style.css` und `dist_strato/assets/css/style.css` geprueft: identisch.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Keine bekannten Blocker.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Keine HTML-Inhalte.
+  - Kein Backend.
+  - Keine neuen Features.
+  - Keine Arbeiten ausserhalb des Projektordners.
+
+## 2026-05-04 - Footer- und Navigationssymbol-Design final getestet
+
+- Datum: 2026-05-04
+- Auftrag: Finaler Design-Test fuer Footer-Leiste und Navigationssymbole. Nur CSS, keine Texte, keine Medien, keine Seitenstruktur, kein JS, kein Backend.
+- Geaenderte Dateien:
+  - `public/assets/css/style.css`
+  - `dist_strato/assets/css/style.css`
+  - `docs/PROGRESS.md`
+- Footer-Leisten-Design:
+  - Footer-Panel als kompakte dunkle Abschlussleiste gestaltet.
+  - Hintergrund: dunkler Lila-/Logo-Verlauf ueber `var(--midnight-plum)` und `var(--obsidian-black)`.
+  - Schrift und Links auf helle, gut lesbare Farben gesetzt.
+  - Dezente helle Umrandung, keine starke Schattenwirkung.
+  - Innenabstand kompakt gehalten, max-width bleibt ueber bestehende `.container`-Logik erhalten.
+- Vertikale Footer-Symbole:
+  - Bestehende Footer-Corner-Spans im Footer per CSS ausgeblendet.
+  - Linke und rechte vertikale Symbolreihe per CSS-Pseudo-Elementen gesetzt: Herz, Karo, Kreuz, Pik.
+  - Symbole dezent hell und passend zum dunklen Footer-Hintergrund.
+- Groessere Nav-Symbole:
+  - `.main-nav::before` und `.main-nav::after` von `0.66rem` auf `1.18rem` vergroessert.
+  - Farbe auf dunklen Logo-Ton `var(--obsidian-black)` gesetzt.
+  - Letter-Spacing reduziert, damit die groesseren Symbole kompakt bleiben.
+- Nav-Rahmen:
+  - `.main-nav` als eigener kleiner Bereich mit dezenter Kontur, leichtem hellen Hintergrund und feinem inneren Doppelrahmen gestaltet.
+  - Header bleibt kompakt; Logo und Navigation bleiben nebeneinander.
+- public/dist_strato-Synchronisierung:
+  - `public/assets/css/style.css` nach `dist_strato/assets/css/style.css` kopiert.
+  - Hash-Paritaet fuer alle 9 HTML-Dateien, CSS und JS geprueft: identisch.
+- Tests:
+  - `public/index.html` und `dist_strato/index.html` ueber temporaere lokale statische Server geoeffnet.
+  - Browserpruefung mit Microsoft Edge/Playwright: keine Konsolenfehler.
+  - Computed-Style-Pruefung Footer: dunkler Verlauf, helle Schrift, helle Border, `box-shadow: none`, vertikale Symbolinhalte links/rechts vorhanden, kompakte Hoehe.
+  - Computed-Style-Pruefung Nav: Symbole `18.88px`, Nav-Rahmen vorhanden, Hintergrund vorhanden, keine Logo/Nav-Ueberlappung.
+  - HTTP-Pruefung: alle 9 Seiten in `public` und `dist_strato` liefern Status 200.
+  - Scan: keine `/api/lead`- oder `fetch(`-Treffer in `public`/`dist_strato`.
+  - Forbidden-Files-Scan: keine verbotenen Dateien in `dist_strato`.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Keine bekannten Blocker.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Keine Texte.
+  - Keine Galerie-/Video-/Kontaktinhalte.
+  - Keine Links.
+  - Keine HTML-Struktur.
+  - Kein JS.
+  - Kein Backend.
+  - Keine Medienpfade.
+  - Keine Arbeiten ausserhalb des Projektordners.
+
+## 2026-05-04 - Ueber-uns-Seite nach Footer-Regression repariert
+
+- Datum: 2026-05-04
+- Ursache:
+  - `ueber-uns.html` war im Hauptbereich nach der Ueberschrift abgeschnitten.
+  - Footer-Absaetze standen dadurch faelschlich im `main`; der eigentliche Footer-Block fehlte an der korrekten Stelle.
+- Geaenderte Dateien:
+  - `public/ueber-uns.html`
+  - `dist_strato/ueber-uns.html`
+  - `docs/PROGRESS.md`
+- Reparatur:
+  - Hauptbereich mit zwei Panels wiederhergestellt: `Ein kleines Wunder entsteht` und `Unsere Designs`.
+  - Die drei Ueber-uns-Absaetze und die Design-Chips wieder korrekt im `main` platziert.
+  - Footer erst nach `</main>` gesetzt.
+  - Footer-Links aus dem Hauptbereich entfernt.
+  - `dist_strato/ueber-uns.html` aus `public/ueber-uns.html` synchronisiert.
+- Tests:
+  - Drei Ueber-uns-Absaetze in `public/ueber-uns.html` gefunden.
+  - `Unsere Designs` in `public/ueber-uns.html` gefunden.
+  - Footer-Position geprueft: `<footer>` steht nach `</main>`.
+  - Hash-Paritaet `public/ueber-uns.html` zu `dist_strato/ueber-uns.html`: identisch.
+  - Alle 9 HTML-Seiten in `public` und `dist_strato` kurz auf Header/Main/Footer-Struktur, Main-Inhalt und Footer-Klassen ausserhalb des Main geprueft.
+  - Scan: keine `/api/lead`- oder `fetch(`-Treffer in `public`/`dist_strato`.
+  - Forbidden-Files-Scan: keine verbotenen Dateien in `dist_strato`.
+- Ergebnisstatus: GRUEN
+
+## 2026-05-04 - STRATO-Uploadpaket final geprueft und sprachlich bereinigt
+
+- Datum: 2026-05-04
+- Gepruefter Ordner:
+  - `dist_strato/`
+- Geaenderte Uploadpaket-Dateien:
+  - `dist_strato/designerin.html`
+  - `dist_strato/kontakt.html`
+  - `dist_strato/datenschutz.html`
+  - `dist_strato/assets/css/style.css`
+- Dokumentation:
+  - `docs/STRATO_UPLOAD_FINAL_CHECK.md`
+  - `docs/PROGRESS.md`
+- Gefundene und korrigierte Punkte:
+  - Sichtbarer Portrait-Platzhalter in `designerin.html` bereinigt.
+  - `Press-On Designs` zu `Press-On-Designs` korrigiert.
+  - Kontakttext und Meta-Beschreibung auf Instagram und TikTok aktualisiert.
+  - Datenschutz-Hinweise auf Instagram und TikTok aktualisiert.
+  - Interner `V1`-Rest aus CSS-Kommentar entfernt.
+- Tests:
+  - `dist_strato/`-Dateistruktur geprueft.
+  - Sichtbare Texte, Sonderzeichen, Umlaute, Platzhalter und Dev-Begriffe geprueft.
+  - Interne Links, externe Links und Asset-Pfade geprueft.
+  - Logo, 5 Bilder und 5 MP4-Videos geprueft.
+  - CSS/JS auf API-, Backend-, CDN- und Tracking-Reste geprueft.
+  - Impressum und Datenschutz final gelesen.
+  - Alle 9 HTML-Seiten lokal aus `dist_strato/` mit HTTP 200 geprueft.
+  - Browser-Console-Check auf `dist_strato/index.html`: keine Fehler.
+- Ergebnisstatus: GRUEN
+
+## 2026-05-04 - GitHub-Readiness umgesetzt (Security, README, Doku, Pre-Commit-Check)
+
+- Datum: 2026-05-04
+- Auftrag: Projekt sicher fuer GitHub vorbereiten, ohne Push.
+- Gelesene Pflichtdateien:
+  - `README.md`
+  - `docs/PROJECT_RULES.md`
+  - `docs/PROGRESS.md`
+  - `docs/STRATO_UPLOAD_FINAL_CHECK.md`
+  - `docs/STRATO_STATIC_DEPLOYMENT.md`
+  - `.gitignore`
+- Geaenderte Dateien:
+  - `.gitignore`
+  - `README.md`
+  - `docs/GITHUB_READINESS.md`
+  - `docs/PROGRESS.md`
+- Was geaendert wurde:
+  - `.gitignore` gehaertet und um lokale/sensible Artefakte ergaenzt (`cookies.txt`, `.vscode/`, `.codex/`, `*.zip`, robuste `.env.*`-Regel mit Ausnahme fuer `.env.example`).
+  - `README.md` auf GitHub-taugliche V1-Darstellung umgestellt (Status, Features, Tech-Stack, lokaler Start, Deployment, Sicherheit, Datensatz-Hinweis).
+  - `docs/GITHUB_READINESS.md` auf realen V1-Istzustand konsolidiert (Was darf rein, was nicht, Grenzen, Deployment-Hinweis, V2-Ausblick, Push-Regel).
+  - Sicherheits- und Scope-Check gegen sensible Inhalte und lokale Pfade durchgefuehrt.
+- Was getestet wurde:
+  - `git status --short --branch` vor und nach den Aenderungen geprueft.
+  - Trefferpruefung fuer sensible Muster in `README.md`, `public/`, `dist_strato/` und `docs/` durchgefuehrt.
+  - Verifiziert, dass `cookies.txt` sensible Session-Marker enthaelt und daher ausgeschlossen wird.
+- Ergebnisstatus: GRUEN
+- Offene Punkte:
+  - Optionaler lokaler Commit kann erfolgen, aber kein Push ohne explizite Freigabe.
+- Was ausdruecklich NICHT geaendert wurde:
+  - Kein Backend-Code.
+  - Keine Daten in `data/`.
+  - Keine Medieninhalte.
+  - Keine Arbeiten ausserhalb des Projektordners.

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin-Dashboard | Alice Wonder Nails</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body class="admin-page">
+  <main class="admin-wrap">
+    <div class="admin-topbar">
+      <h1>Admin-Dashboard</h1>
+      <a class="btn btn-secondary" href="/admin/logout">Logout</a>
+    </div>
+
+    {% if flash %}
+    <div class="flash {{ flash.level }}">{{ flash.message }}</div>
+    {% endif %}
+
+    <article class="panel suit-card suit-club-heart filter-panel" style="margin-bottom:14px;">
+      <h2>Filter</h2>
+      <form method="get" action="/admin/dashboard">
+        <label for="status_filter">Status</label>
+        <select id="status_filter" name="status_filter">
+          <option value="">Alle</option>
+          {% for st in statuses %}
+          <option value="{{ st }}" {% if selected_status == st %}selected{% endif %}>{{ st }}</option>
+          {% endfor %}
+        </select>
+
+        <label class="inline">
+          <input type="checkbox" name="include_deleted" value="1" {% if include_deleted %}checked{% endif %}>
+          Gelöschte anzeigen
+        </label>
+
+        <button class="btn btn-primary" type="submit">Anwenden</button>
+      </form>
+    </article>
+
+    <article class="panel suit-card suit-diamond-spade" style="margin-bottom:14px;">
+      <h2>Aktionen</h2>
+      <div class="admin-toolbar">
+        <form method="post" action="/admin/export">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button class="btn btn-primary" type="submit">CSV-Export</button>
+        </form>
+
+        <form method="post" action="/admin/cleanup">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button class="btn btn-secondary" type="submit">Cleanup > 6 Monate</button>
+        </form>
+      </div>
+    </article>
+
+    <article class="panel suit-card suit-heart-diamond">
+      <h2>Leads ({{ leads|length }})</h2>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Erstellt</th>
+              <th>E-Mail</th>
+              <th>Daten</th>
+              <th>Status &amp; Notiz</th>
+              <th>Löschfrist</th>
+              <th>Aktionen</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for lead in leads %}
+            <tr>
+              <td class="mono">{{ lead.id }}</td>
+              <td class="mono">{{ lead.created_at }}</td>
+              <td class="mono">{{ lead.email }}</td>
+              <td>
+                <div><strong>Name:</strong> {{ lead.name or '-' }}</div>
+                <div><strong>Interesse:</strong> {{ lead.interest or '-' }}</div>
+                <div><strong>Nachricht:</strong> {{ lead.message or '-' }}</div>
+                <div><strong>Datenschutz:</strong> {{ 'ja' if lead.privacy_accepted else 'nein' }}</div>
+                <div><strong>Einmal-Startmail:</strong> {{ 'ja' if lead.one_time_notice_accepted else 'nein' }}</div>
+                <div><strong>Startmail gesendet:</strong> {{ lead.notice_sent_at or '-' }}</div>
+                <div><strong>Gelöscht am:</strong> {{ lead.deleted_at or '-' }}</div>
+              </td>
+              <td>
+                <div style="margin-bottom:6px;">
+                  <span class="status-badge status-{{ lead.status }}">{{ lead.status }}</span>
+                </div>
+                <form class="row-form" method="post" action="/admin/leads/{{ lead.id }}/update">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                  <select name="status" required>
+                    {% for st in statuses %}
+                    <option value="{{ st }}" {% if lead.status == st %}selected{% endif %}>{{ st }}</option>
+                    {% endfor %}
+                  </select>
+                  <textarea name="admin_note" rows="3" placeholder="Interne Admin-Notiz">{{ lead.admin_note or '' }}</textarea>
+                  <button class="btn btn-primary" type="submit">Speichern</button>
+                </form>
+              </td>
+              <td class="mono">{{ lead.delete_after }}</td>
+              <td>
+                <div class="row-actions">
+                  <form method="post" action="/admin/leads/{{ lead.id }}/startmail">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <label class="inline">
+                      <input type="checkbox" name="anonymize_now" value="1" checked>
+                      direkt anonymisieren
+                    </label>
+                    <button class="btn btn-secondary" type="submit">Startmail gesendet</button>
+                  </form>
+
+                  <form method="post" action="/admin/leads/{{ lead.id }}/delete">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <button class="btn btn-secondary" type="submit">Löschen</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+            {% else %}
+            <tr>
+              <td colspan="7">Keine Leads vorhanden.</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
