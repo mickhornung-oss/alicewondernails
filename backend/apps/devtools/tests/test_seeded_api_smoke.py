@@ -177,10 +177,10 @@ class SeededShippingAPITest(TestCase):
         self.assertTrue(data.get('success'))
 
     def test_seeded_shipping_methods_visible(self):
-        """Seeded shipping methods are visible (min. 5)."""
-        response = self.client.get('/api/v1/shipping/methods/?customer_group=b2c')
+        """Seeded shipping methods for country=DE are visible (min. 3 DE B2C methods)."""
+        response = self.client.get('/api/v1/shipping/methods/?country=DE&customer_group=b2c')
         data = response.json()['data']
-        self.assertGreaterEqual(len(data), 5, "Expected at least 5 seeded shipping methods")
+        self.assertGreaterEqual(len(data), 3, "Expected at least 3 seeded DE shipping methods")
 
     def test_shipping_methods_have_required_fields(self):
         """Shipping methods have price and currency fields."""

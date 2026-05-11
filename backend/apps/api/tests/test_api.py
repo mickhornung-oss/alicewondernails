@@ -229,6 +229,86 @@ class ShippingMethodsAPITest(TestCase):
         response = self.client.get('/api/v1/shipping/methods/?customer_group=invalid')
         assert response.status_code == 400
 
+    def test_post_not_allowed_on_shipping(self):
+        """Test POST is not allowed on shipping endpoint."""
+        response = self.client.post('/api/v1/shipping/methods/')
+        assert response.status_code in [405, 400]
+
+
+class ShippingMethodsCountryFilterTest(TestCase):
+    """Tests for shipping methods country filtering (AB 24.2)."""
+
+    def setUp(self):
+        self.client = Client()
+        self.zone_de = ShippingZone.objects.create(
+            name='Germany',
+            code='de_std',
+            countries=['DE'],
+            is_active=True,
+        )
+        self.zone_eu = ShippingZone.objects.create(
+            name='EU extended',
+            code='eu_ext',
+            countries=['AT', 'FR', 'NL'],
+            is_active=True,
+        )
+        ShippingMethod.objects.create(
+            zone=self.zone_de, name='Standard DE B2C', code='standard_de_b2c',
+            customer_group='b2c', base_price='4.99', currency='EUR', is_active=True,
+        )
+        ShippingMethod.objects.create(
+            zone=self.zone_de, name='Standard DE B2B', code='standard_de_b2b',
+            customer_group='b2b', base_price='3.99', currency='EUR', is_active=True,
+        )
+        ShippingMethod.objects.create(
+            zone=self.zone_eu, name='Standard EU B2C', code='standard_eu_b2c',
+            customer_group='b2c', base_price='9.99', currency='EUR', is_active=True,
+        )
+        ShippingMethod.objects.create(
+            zone=self.zone_eu, name='Standard EU B2B', code='standard_eu_b2b',
+            customer_group='b2b', base_price='8.99', currency='EUR', is_active=True,
+        )
+
+    def _codes(self, response):
+        return [m['code'] for m in response.json()['data']]
+
+    def test_country_de_b2c_returns_only_de_methods(self):
+        """country=DE + b2c yields only DE zone methods, not EU."""
+        response = self.client.get('/api/v1/shipping/methods/?country=DE&customer_group=b2c')
+        assert response.status_code == 200
+        codes = self._codes(response)
+        assert 'standard_de_b2c' in codes
+        assert 'standard_eu_b2c' not in codes
+
+    def test_country_de_b2b_returns_only_de_methods(self):
+        """country=DE + b2b yields only DE zone methods, not EU."""
+        response = self.client.get('/api/v1/shipping/methods/?country=DE&customer_group=b2b')
+        assert response.status_code == 200
+        codes = self._codes(response)
+        assert 'standard_de_b2b' in codes
+        assert 'standard_eu_b2b' not in codes
+
+    def test_country_at_b2c_returns_only_eu_methods(self):
+        """country=AT + b2c yields only EU zone methods, not DE."""
+        response = self.client.get('/api/v1/shipping/methods/?country=AT&customer_group=b2c')
+        assert response.status_code == 200
+        codes = self._codes(response)
+        assert 'standard_eu_b2c' in codes
+        assert 'standard_de_b2c' not in codes
+
+    def test_country_at_b2b_returns_only_eu_methods(self):
+        """country=AT + b2b yields only EU zone methods, not DE."""
+        response = self.client.get('/api/v1/shipping/methods/?country=AT&customer_group=b2b')
+        assert response.status_code == 200
+        codes = self._codes(response)
+        assert 'standard_eu_b2b' in codes
+        assert 'standard_de_b2b' not in codes
+
+    def test_invalid_customer_group_returns_400(self):
+        """invalid customer_group returns 400 regardless of country."""
+        response = self.client.get('/api/v1/shipping/methods/?country=DE&customer_group=invalid')
+        assert response.status_code == 400
+
 
 class PaymentMethodsAPITest(TestCase):
     """Tests for payment methods endpoint."""

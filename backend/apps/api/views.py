@@ -200,15 +200,10 @@ def shipping_methods(request):
         )
     
     try:
-        from apps.shipping.models import ShippingZone, ShippingMethod
-        
-        # Get available zones/methods for country - include "all" + specific customer_group
-        methods = ShippingMethod.objects.filter(
-            is_active=True,
-            customer_group__in=['all', customer_group],
-            zone__is_active=True
-        ).distinct()
-        
+        methods = get_available_shipping_methods(
+            country_code=country,
+            customer_group=customer_group,
+        )
         serializer = ShippingMethodSerializer(methods, many=True)
         return api_response_success(serializer.data)
     except Exception as e:

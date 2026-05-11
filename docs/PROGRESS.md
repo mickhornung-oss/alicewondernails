@@ -5734,3 +5734,176 @@ Siehe separate Sektion unten.
   - Keine Root-package-Dateien.
   - Kein CORS.
   - Kein Warenkorb, Checkout, Login/Auth, Payment, Deployment oder Upload.
+
+---
+
+## 2026-05-11 - Arbeitsblock 24.1b – Lokale Test-*-Daten bereinigen
+
+- Datum: 2026-05-11
+- Auftrag: Exakte Loeschung der in AB 24.1a identifizierten lokalen Test-*-Daten aus der lokalen Entwicklungsdatenbank
+- Scope: Nur lokale DB-Bereinigung. Keine Code-, Model-, Migration-, CSV- oder Frontend-Aenderungen.
+
+### Vorher (Counts vor Bereinigung)
+
+| Objekt | Anzahl |
+|--------|--------|
+| Test-Kategorien (slug icontains 'test') | 2 |
+| Test-Produkte (slug icontains 'test') | 2 |
+| Test-Preise (direkt via product_id) | 2 |
+| Test-Varianten | 0 |
+| Test-Bilder | 0 |
+| CartItem zu Test-Produkten | 0 |
+| OrderItem zu Test-Produkten | 0 |
+
+### Geloeschte Objekte
+
+- ProductCategory ID=13 slug='test-642e0d48-cb58-4463-b031-984078995e45'
+- ProductCategory ID=14 slug='test-765f3abc-28d2-48e1-8ab8-9b35df67a3b7'
+- Product ID=25 slug='test-89d3ecb7-3860-4b9d-87fe-3169af4c86a6' cat=13
+- Product ID=26 slug='test-9dfaca42-4506-49bb-a156-40a57a050161' cat=14
+- ProductPrice ID=46 (cascade von Produkt 25, product-level, b2c, 12.99 EUR)
+- ProductPrice ID=47 (cascade von Produkt 26, product-level, b2c, 12.99 EUR)
+
+Django ORM Rueckgabe:
+- Product.delete(): (4, {'pricing.ProductPrice': 2, 'catalog.Product': 2})
+- ProductCategory.delete(): (2, {'catalog.ProductCategory': 2})
+- Gesamt: 8 Objekte
+
+### Nachher (Counts nach Bereinigung)
+
+| Pruefung | Erwartet | Ergebnis |
+|----------|----------|----------|
+| ProductCategory (slug icontains 'test') | 0 | 0 GRUEN |
+| Product (slug icontains 'test') | 0 | 0 GRUEN |
+| ProductCategory gesamt | 4 | 4 GRUEN |
+| Product gesamt | 8 | 8 GRUEN |
+| Alle 4 Demo-Kategorien vorhanden | ja | ja GRUEN |
+| Alle 8 Demo-Produkte vorhanden | ja | ja GRUEN |
+
+### CSV-Import nach Bereinigung
+
+```
+0 created | 0 updated | 64 skipped
+```
+Import bleibt idempotent. Keine neuen Testdaten erzeugt.
+
+### Django-Checks
+
+- `manage.py check`: System check identified no issues (0 silenced)
+- `manage.py makemigrations --check --dry-run`: No changes detected
+- `pytest backend -q`: 425 passed in 60.51s
+
+### pytest-Isolation Befund (nur gelesen, nichts geaendert)
+
+- `backend/pytest.ini`: DJANGO_SETTINGS_MODULE = config.settings.local
+- Keine conftest.py vorhanden
+- Alle 425 Tests nutzen `django.test.TestCase` (ausser 5 Tests in test_shipping.py mit `@pytest.mark.django_db`)
+- `django.test.TestCase` erzeugt automatisch eine eigene Test-DB (`test_alice_wondernails_local`) und rollt jede Transaktion zurueck. Keine Schreibgefahr auf die Dev-DB bei korrekt ausgefuehrtem `pytest`-Lauf.
+- Herkunft der Test-*-Daten: Vermutlich fruehzeitiger Entwicklungsstand ohne isolierte Test-DB, wahrscheinlich vor vollstaendiger pytest-django-Konfiguration. Einmalig erzeugt, seitdem nie mehr erneuert.
+- Empfehlung fuer AB 24.1c: conftest.py mit `django_db_setup`-Override pruefen, um sicherzustellen, dass Dev-DB-Name nie als Test-DB verwendet wird. Kein Blocker.
+
+### Constraints eingehalten
+
+- Keine Backend-Code-Aenderungen
+- Keine API-Aenderungen
+- Keine Model-Aenderungen
+- Keine Migrations
+- Keine CSV-Aenderungen
+- Keine Frontend-Aenderungen
+- Kein Shipping-Fix, kein Payment-Fix, kein Deployment
+
+### Status
+
+**Arbeitsblock AB 24.1b: COMPLETE**
+Lokale Testdaten bereinigt; Projekt bleibt lokal entwicklungsbereit.
+
+---
+
+## 2026-05-11 - Arbeitsblock 24.2 – Shipping-API Country-Filter Bugfix
+
+- Datum: 2026-05-11
+- Auftrag: GET /api/v1/shipping/methods/?country=DE lieferte auch EU-Methoden, weil der country-Parameter ignoriert wurde.
+- Scope: Nur views.py + API-Tests + Smoke-Test-Anpassung. Keine Models, Migrations, CSV, Frontend.
+
+### Ursache
+
+`backend/apps/api/views.py` importierte `get_available_shipping_methods` bereits oben,
+aber der Try-Block in `shipping_methods()` führte stattdessen einen direkten ORM-Query durch:
+
+```python
+# BUG: country-Parameter wurde gelesen, aber nicht genutzt
+ShippingMethod.objects.filter(
+    is_active=True,
+    customer_group__in=['all', customer_group],
+    zone__is_active=True
+).distinct()
+```
+
+Das Queryset filterte nie nach Zone/Land, deshalb kamen DE + EU Methoden gleichzeitig zurück.
+
+### Fix
+
+In `backend/apps/api/views.py`, Funktion `shipping_methods()`:
+
+```python
+# VORHER (buggy)
+from apps.shipping.models import ShippingZone, ShippingMethod
+methods = ShippingMethod.objects.filter(
+    is_active=True,
+    customer_group__in=['all', customer_group],
+    zone__is_active=True
+).distinct()
+
+# NACHHER (korrekt)
+methods = get_available_shipping_methods(
+    country_code=country,
+    customer_group=customer_group,
+)
+```
+
+`get_available_shipping_methods` aus `apps.shipping.services` filtert korrekt via
+`ShippingZone.countries__contains=[country_code]` und ist bereits importiert.
+
+### Geaenderte Dateien
+
+1. `backend/apps/api/views.py` - Try-Block in `shipping_methods()` ersetzt
+2. `backend/apps/api/tests/test_api.py` - Neue Klasse `ShippingMethodsCountryFilterTest` + `test_post_not_allowed_on_shipping` wiederhergestellt
+3. `backend/apps/devtools/tests/test_seeded_api_smoke.py` - `test_seeded_shipping_methods_visible` an korrektes Verhalten angepasst (country=DE, >= 3 statt >= 5)
+
+### Neue Tests (ShippingMethodsCountryFilterTest)
+
+| Test | Ergebnis |
+|------|----------|
+| country=DE, b2c → nur DE-Methoden | GRUEN |
+| country=DE, b2b → nur DE-Methoden | GRUEN |
+| country=AT, b2c → nur EU-Methoden | GRUEN |
+| country=AT, b2b → nur EU-Methoden | GRUEN |
+| country=DE, customer_group=invalid → 400 | GRUEN |
+
+Testlogik: keine exakten IDs, Prüfung per `code`-Feld (z.B. `standard_de_b2c`, `standard_eu_b2c`).
+
+### Smoke-Test-Anpassung
+
+`SeededShippingAPITest.test_seeded_shipping_methods_visible` prüfte `>= 5` ohne country.
+Das war Folge des Bugs. Fix: `country=DE&customer_group=b2c`, Schwelle `>= 3` (3 DE-B2C-Methoden im Seeder).
+
+### Validierung
+
+- `manage.py check`: System check identified no issues (0 silenced)
+- `manage.py makemigrations --check --dry-run`: No changes detected
+- `manage.py import_demo_csv`: 0 created | 0 updated | 64 skipped
+- `pytest backend -q`: 431 passed in 55.08s
+
+### Constraints eingehalten
+
+- Keine Model-Aenderungen
+- Keine Migrations
+- Keine API-Response-Struktur geaendert
+- Keine Frontend-Aenderungen
+- Kein Payment-Fix
+- Kein Deployment
+
+### Status
+
+**Arbeitsblock AB 24.2: COMPLETE**
+Shipping-API lokal korrigiert; Projekt bleibt lokal entwicklungsbereit.
