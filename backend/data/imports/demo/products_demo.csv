@@ -1,0 +1,9 @@
+name,slug,category_slug,product_type,visibility,short_description,description
+Gel Color - Rose Gold,gel-color-rose-gold,nail-colors,gel,public,Professional gel nail color,Premium gel for long-lasting shine
+Polish Classic - Red,polish-classic-red,nail-colors,nail_polish,public,Classic red polish,Timeless red for any occasion
+Polish Pro - Azure,polish-pro-azure,nail-colors,nail_polish,b2c_only,Azure blue polish,Azure blue for B2C customers only
+Nail Oil - Premium,nail-oil-premium,care-products,care,public,Premium nail oil,Nourishing oil for healthy nails
+Nail Primer,nail-primer,care-products,care,public,Base coat primer,Professional primer for nail prep
+Nail Strengthener,nail-strengthener,care-products,care,public,Strengthening treatment,Fortifies weak nails
+Starter Set,starter-set,sets-bundles,set,b2c_only,Complete beginner set,Perfect for beginners
+B2B Wholesale Kit,b2b-wholesale-kit,sets-bundles,set,b2b_only,Bulk wholesale pack,For B2B customers

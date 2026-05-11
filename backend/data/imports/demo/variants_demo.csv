@@ -1,0 +1,10 @@
+product_slug,name,sku,is_default
+gel-color-rose-gold,5ml Standard,GEL-RG-5ML,TRUE
+gel-color-rose-gold,10ml XL,GEL-RG-10ML,FALSE
+polish-classic-red,15ml,POLISH-RED-15ML,TRUE
+polish-pro-azure,15ml,POLISH-AZURE-15ML,TRUE
+nail-oil-premium,30ml,OIL-PREM-30ML,TRUE
+nail-primer,10ml,PRIMER-10ML,TRUE
+nail-strengthener,12ml,STRENGTH-12ML,TRUE
+starter-set,Complete,STARTER-SET-001,TRUE
+b2b-wholesale-kit,50pcs,B2B-KIT-50,TRUE

@@ -1,0 +1,16 @@
+product_slug,variant_sku,customer_group,amount,currency,tax_rate,price_includes_tax
+gel-color-rose-gold,GEL-RG-5ML,b2c,12.99,EUR,19.00,TRUE
+gel-color-rose-gold,GEL-RG-5ML,b2b,8.50,EUR,19.00,TRUE
+gel-color-rose-gold,GEL-RG-10ML,b2c,19.99,EUR,19.00,TRUE
+gel-color-rose-gold,GEL-RG-10ML,b2b,13.00,EUR,19.00,TRUE
+polish-classic-red,POLISH-RED-15ML,b2c,9.99,EUR,19.00,TRUE
+polish-classic-red,POLISH-RED-15ML,b2b,6.50,EUR,19.00,TRUE
+polish-pro-azure,POLISH-AZURE-15ML,b2c,9.99,EUR,19.00,TRUE
+nail-oil-premium,OIL-PREM-30ML,b2c,18.99,EUR,19.00,TRUE
+nail-oil-premium,OIL-PREM-30ML,b2b,12.00,EUR,19.00,TRUE
+nail-primer,PRIMER-10ML,b2c,14.99,EUR,19.00,TRUE
+nail-primer,PRIMER-10ML,b2b,9.50,EUR,19.00,TRUE
+nail-strengthener,STRENGTH-12ML,b2c,16.99,EUR,19.00,TRUE
+nail-strengthener,STRENGTH-12ML,b2b,10.99,EUR,19.00,TRUE
+starter-set,STARTER-SET-001,b2c,49.99,EUR,19.00,TRUE
+b2b-wholesale-kit,B2B-KIT-50,b2b,125.00,EUR,19.00,TRUE

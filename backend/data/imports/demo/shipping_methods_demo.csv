@@ -1,0 +1,11 @@
+name,code,zone_code,customer_group,base_price,currency,estimated_min_days,estimated_max_days
+Standard (2-3 days),standard_de_b2c,de_std,b2c,4.99,EUR,2,3
+Standard (2-3 days),standard_de_b2b,de_std,b2b,3.50,EUR,2,3
+Express (next day),express_de_b2c,de_std,b2c,9.99,EUR,1,1
+Express (next day),express_de_b2b,de_std,b2b,6.50,EUR,1,1
+Overnight,overnight_de_b2c,de_std,b2c,14.99,EUR,0,1
+Overnight,overnight_de_b2b,de_std,b2b,10.00,EUR,0,1
+Standard EU (3-5 days),standard_eu_b2c,eu_ext,b2c,8.99,EUR,3,5
+Standard EU (3-5 days),standard_eu_b2b,eu_ext,b2b,5.50,EUR,3,5
+Express EU (2 days),express_eu_b2c,eu_ext,b2c,14.99,EUR,2,2
+Express EU (2 days),express_eu_b2b,eu_ext,b2b,9.99,EUR,2,2

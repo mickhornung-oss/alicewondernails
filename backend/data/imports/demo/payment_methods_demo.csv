@@ -1,0 +1,5 @@
+name,code,provider,customer_group
+Bank Transfer,bank_transfer,bank_transfer,all
+Invoice,invoice,invoice,all
+PayPal,paypal,paypal,all
+Credit Card,credit_card,stripe,all

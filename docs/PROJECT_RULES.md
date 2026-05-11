@@ -90,3 +90,21 @@ Jeder Platzhalter muss klar erklaeren:
 Beispielformat:
 
 `[PLATZHALTER: Kurzer Vorstellungstext fuer Alice Wonder Nails. Inhalt spaeter durch Frau/Tochter. Ton: kreativ, hochwertig, freundlich, leicht maerchenhaft. Laenge: ca. 3-5 Saetze.]`
+
+## 10. Backend-First-Regel
+
+- Das Projekt startet mit dem Backend.
+- Frontend-Arbeiten folgen erst, wenn das Backend-Fundament steht.
+- Kein Frontend-Build rechtfertigt einen nicht fertigen Backend-Stand.
+
+## 11. Technologieentscheidung
+
+- Primär: Django + PostgreSQL
+- Modulares Monolith-Design
+- Keine Mikroservices in Arbeitsblock 01
+
+## 12. Testregel
+
+- Keine Fake-Tests.
+- Jede Testausgabe muss auf echten Prüfungen beruhen.
+- Fehlende Systemabhängigkeiten müssen klar dokumentiert werden.

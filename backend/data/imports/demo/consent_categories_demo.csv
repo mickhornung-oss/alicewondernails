@@ -1,0 +1,5 @@
+key,name,description,is_required
+newsletter,Newsletter,Subscribe to our newsletter for updates and promotions,FALSE
+analytics,Analytics,Allow analytics to understand how you use our website,FALSE
+marketing,Marketing,Allow marketing cookies for personalized content,FALSE
+terms_accept,Terms & Conditions,Accept our terms and conditions,TRUE
