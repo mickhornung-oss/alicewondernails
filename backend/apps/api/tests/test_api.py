@@ -345,6 +345,62 @@ class PaymentMethodsAPITest(TestCase):
         assert response.status_code == 400
 
 
+class PaymentMethodsIsActiveFilterTest(TestCase):
+    """Tests that is_active filtering works correctly for payment methods."""
+
+    def setUp(self):
+        self.client = Client()
+        PaymentMethod.objects.create(
+            name='Bank Transfer', code='bank_transfer',
+            provider='bank_transfer', customer_group='all', is_active=True,
+        )
+        PaymentMethod.objects.create(
+            name='PayPal', code='paypal',
+            provider='paypal', customer_group='all', is_active=False,
+        )
+        PaymentMethod.objects.create(
+            name='Credit Card', code='credit_card',
+            provider='stripe', customer_group='all', is_active=False,
+        )
+        PaymentMethod.objects.create(
+            name='Invoice', code='invoice',
+            provider='invoice', customer_group='all', is_active=False,
+        )
+
+    def test_b2c_returns_only_bank_transfer(self):
+        """B2C should only see bank_transfer when others are inactive."""
+        response = self.client.get('/api/v1/payments/methods/?customer_group=b2c')
+        assert response.status_code == 200
+        codes = [m['code'] for m in response.json()['data']]
+        assert 'bank_transfer' in codes
+        assert len(codes) == 1
+
+    def test_b2b_returns_only_bank_transfer(self):
+        """B2B should only see bank_transfer when others are inactive."""
+        response = self.client.get('/api/v1/payments/methods/?customer_group=b2b')
+        assert response.status_code == 200
+        codes = [m['code'] for m in response.json()['data']]
+        assert 'bank_transfer' in codes
+        assert len(codes) == 1
+
+    def test_inactive_paypal_not_visible_b2c(self):
+        """Inactive paypal must not appear in B2C results."""
+        response = self.client.get('/api/v1/payments/methods/?customer_group=b2c')
+        codes = [m['code'] for m in response.json()['data']]
+        assert 'paypal' not in codes
+
+    def test_inactive_credit_card_not_visible_b2c(self):
+        """Inactive credit_card must not appear in B2C results."""
+        response = self.client.get('/api/v1/payments/methods/?customer_group=b2c')
+        codes = [m['code'] for m in response.json()['data']]
+        assert 'credit_card' not in codes
+
+    def test_invalid_customer_group_returns_400(self):
+        """Invalid customer_group must return 400."""
+        response = self.client.get('/api/v1/payments/methods/?customer_group=invalid')
+        assert response.status_code == 400
+
+
 class LegalActiveAPITest(TestCase):
     """Tests for legal active documents endpoint."""
     

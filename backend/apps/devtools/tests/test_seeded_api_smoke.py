@@ -219,10 +219,10 @@ class SeededPaymentsAPITest(TestCase):
         self.assertTrue(data.get('success'))
 
     def test_seeded_payment_methods_visible(self):
-        """Seeded payment methods are visible (min. 4)."""
+        """Seeded payment methods are visible (min. 1 active)."""
         response = self.client.get('/api/v1/payments/methods/')
         data = response.json()['data']
-        self.assertGreaterEqual(len(data), 4, "Expected at least 4 seeded payment methods")
+        self.assertGreaterEqual(len(data), 1, "Expected at least 1 seeded active payment method")
 
     def test_payment_methods_have_required_fields(self):
         """Payment methods have required fields."""

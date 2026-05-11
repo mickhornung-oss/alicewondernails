@@ -232,13 +232,7 @@ def payment_methods(request):
         )
     
     try:
-        from apps.payments.models import PaymentMethod
-        
-        # Include "all" + specific customer_group
-        methods = PaymentMethod.objects.filter(
-            is_active=True,
-            customer_group__in=['all', customer_group]
-        )
+        methods = get_available_payment_methods(customer_group=customer_group)
         serializer = PaymentMethodSerializer(methods, many=True)
         return api_response_success(serializer.data)
     except Exception as e:

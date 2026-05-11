@@ -200,7 +200,10 @@ class Command(BaseCommand):
                     customer_group = row.get('customer_group', 'all').strip()
                     if customer_group not in ['all', 'b2c', 'b2b']:
                         raise ValueError(f'Invalid customer_group: {customer_group}')
-                    
+
+                    is_active_raw = row.get('is_active', 'true').strip().lower()
+                    is_active = is_active_raw in {'true', '1', 'yes', 'y', 'ja'}
+
                     obj, created, updated = self._upsert_with_change_detection(
                         PaymentMethod,
                         {'code': row['code'].strip()},
@@ -208,7 +211,7 @@ class Command(BaseCommand):
                             'name': row['name'].strip(),
                             'provider': row['provider'].strip(),
                             'customer_group': customer_group,
-                            'is_active': True,
+                            'is_active': is_active,
                         }
                     )
                     

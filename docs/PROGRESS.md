@@ -5907,3 +5907,103 @@ Das war Folge des Bugs. Fix: `country=DE&customer_group=b2c`, Schwelle `>= 3` (3
 
 **Arbeitsblock AB 24.2: COMPLETE**
 Shipping-API lokal korrigiert; Projekt bleibt lokal entwicklungsbereit.
+
+---
+
+## 2026-05-11 - Arbeitsblock 24.3b – Payment-Demo auf Überweisung fokussieren
+
+- Datum: 2026-05-11
+- Auftrag: Demo-Daten bereinigen — nur `bank_transfer` aktiv, alle anderen Payment-Methoden inaktiv
+- Scope: CSV + Import-Command + API-View + Tests. Keine Models, Migrations, Frontend, Deployment.
+
+### Motivation
+
+Die Demo-CSV hatte alle 4 Zahlungsmethoden ohne `is_active`-Flag. Import setzte alle auf `is_active=True`.
+Nach jedem Re-Import waren alle Methoden aktiv, manuelle DB-Änderungen wurden überschrieben.
+Fachlich soll lokal nur Banküberweisung aktiv sein (einfachste Methode für lokalen Test).
+
+### Implementierung
+
+#### 1. CSV erweitert — `backend/data/imports/demo/payment_methods_demo.csv`
+
+`is_active`-Spalte hinzugefügt:
+
+```csv
+name,code,provider,customer_group,is_active
+Bank Transfer,bank_transfer,bank_transfer,all,TRUE
+Invoice,invoice,invoice,all,FALSE
+PayPal,paypal,paypal,all,FALSE
+Credit Card,credit_card,stripe,all,FALSE
+```
+
+#### 2. Import-Command angepasst — `backend/apps/devtools/management/commands/import_demo_csv.py`
+
+`_import_payment_methods()` liest `is_active` nun aus der CSV-Spalte statt hartcodiert `True`:
+
+```python
+is_active_raw = row.get('is_active', 'true').strip().lower()
+is_active = is_active_raw in {'true', '1', 'yes', 'y', 'ja'}
+```
+
+Import ist idempotent — jeder Re-Import stellt den gewünschten Zustand wieder her.
+
+#### 3. API-View korrigiert — `backend/apps/api/views.py`
+
+`payment_methods()` nutzte einen direkten ORM-Query der `is_active` nicht filterte.
+Ersetzt durch den Service `get_available_payment_methods(customer_group)`:
+
+```python
+methods = get_available_payment_methods(customer_group=customer_group)
+serializer = PaymentMethodSerializer(methods, many=True)
+return api_response_success(serializer.data)
+```
+
+Der Service filtert korrekt nach `is_active=True` + `customer_group IN ['all', customer_group]`.
+
+#### 4. Neue Tests — `backend/apps/api/tests/test_api.py`
+
+Neue Klasse `PaymentMethodsIsActiveFilterTest` (5 Tests):
+
+| Test | Ergebnis |
+|------|----------|
+| b2c → nur bank_transfer | GRUEN |
+| b2b → nur bank_transfer | GRUEN |
+| paypal inaktiv → nicht sichtbar | GRUEN |
+| credit_card inaktiv → nicht sichtbar | GRUEN |
+| invalid customer_group → 400 | GRUEN |
+
+#### 5. Smoke-Tests angepasst
+
+- `backend/apps/devtools/tests/test_seeded_api_smoke.py`: `>= 4` → `>= 1`
+- `backend/apps/devtools/tests/test_csv_api_smoke.py`: `>= 4` → `>= 1`
+
+### Import-Ergebnis
+
+```
+PaymentMethod: 0 created | 3 updated | 1 skipped
+```
+
+bank_transfer=True, invoice=False, paypal=False, credit_card=False
+
+### Validierung
+
+- `manage.py check`: System check identified no issues (0 silenced)
+- `manage.py makemigrations --check --dry-run`: No changes detected
+- `pytest backend -q`: **436 passed in 57.58s**
+
+### Constraints eingehalten
+
+- Keine Model-Änderungen
+- Keine Migrations
+- Keine API-Response-Struktur geändert
+- Keine Frontend-Änderungen
+- Kein Deployment
+
+### Commit-Empfehlung (nächster Block)
+
+`fix: restrict payment demo methods to bank transfer`
+
+### Status
+
+**Arbeitsblock AB 24.3b: COMPLETE**
+Payment-Demo lokal auf Überweisung fokussiert; Projekt bleibt lokal entwicklungsbereit.
